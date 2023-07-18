@@ -1,0 +1,51 @@
+/***General***/
+body
+{
+    margin:0px;
+}
+*
+{
+    font-family: 'Roboto', sans-serif;
+}
+:root {
+    --main-color: #9356DC;
+    --main-bg-color: #FF79DA;
+    --filter-bg-color: #99E2D0;
+}
+/***Header***/
+.logo-header,.header-location
+{
+    display:flex;
+    justify-content: center;
+}
+.logo-header img
+{
+    width:50%;
+    padding-top:20px;
+    padding-bottom:15px;
+}
+.header-location
+{
+    align-items: center;
+    padding:15px;
+    background-color: #EAEAEA;
+}
+form
+{
+    width:38%;
+}
+input[type="text"i]
+{
+    text-align:left;
+    padding-inline-start: 17px;
+    font-size:16px;
+    background-color: #EAEAEA;
+}
+input
+{
+    border-width: 0px;
+}
+input::placeholder
+{
+    color:black;
+}
