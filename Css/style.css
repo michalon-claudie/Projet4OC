@@ -1,0 +1,140 @@
+/***General***/
+body
+{
+    margin:0px;
+}
+*
+{
+    font-family: 'Roboto', sans-serif;
+}
+:root {
+    --main-color: #9356DC;
+    --main-bg-color: #FF79DA;
+    --filter-bg-color: #99E2D0;
+}
+p
+{
+    margin-block-start:0px;
+    margin-block-end:0px;
+}
+h1
+{
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+/***Header***/
+.logo-header,.header-location,.main-content
+{
+    display:flex;
+    justify-content: center;
+}
+.logo-header img
+{
+    width:50%;
+    padding-top:20px;
+    padding-bottom:15px;
+}
+.header-location
+{
+    align-items: center;
+    padding:15px;
+    background-color: #EAEAEA;
+}
+form
+{
+    display:flex;
+}
+input[type="text"i]
+{
+    text-align:left;
+    padding-inline-start: 17px;
+    font-size:16px;
+    font-weight: 500;
+    background-color: #EAEAEA;
+    color: #353535;
+
+}
+input
+{
+    border-width: 0px;
+}
+input::placeholder
+{
+    color:black;
+}
+/****Main-container****/
+.introduction
+{
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+}
+.introduction h1,.introduction p
+{
+    display: flex;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.introduction h1
+{
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 45px;
+    padding-bottom: 10px;
+}
+.introduction p
+{
+    font-size: 18px;
+    font-weight:300;
+    padding-bottom:30px;
+}
+.pink-button p
+{
+    font-size:16px;
+    font-weight:500;
+    color:white;
+    padding-bottom:15px;
+    padding-top:15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.pink-button
+{
+    border-radius:25px;
+    border:1px solid var(--main-bg-color);
+    background:linear-gradient(#FF79DA,#9356DC);
+}
+/***main-container-functioning***/
+.functioning
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+/***functioning-box***/
+.fa-1,.fa-2,.fa-3
+{
+    border-radius: 30px;
+    background-color: #9356DC;
+    padding:10px;
+}
+.box,.section-box
+{
+    display: flex;
+    align-items: center;
+}
+.section-box
+{
+    border-radius: 20px;
+    border:1px solid #F6F6F6;
+}
+/***Restaurants***/
+.Restaurants
+{
+    background-color: #EAEAEA;
+}
+
