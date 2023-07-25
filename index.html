@@ -12,7 +12,10 @@
     <link href="Css/fontawesome-free-6.4.0-web (1)/fontawesome-free-6.4.0-web/css/all.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">   
 </head>
 <body>
     <div class="main-container">
@@ -27,13 +30,13 @@
                 </form>
             </div>
         </header>
-        <div class="introduction">
+        <section class="introduction">
             <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception,</br>sélectionnés par nos soins</p>
             <div class="pink-button">
                 <p>Explorer nos restaurants</p>
             </div>
-        </div>
+        </section>
         <section class="functioning">
             <h2>Fonctionnement</h2>
             <div class="content-box">
@@ -63,8 +66,11 @@
         <section class="Restaurants">
             <h2>Restaurants</h2>
             <div class="cards-content">
-                <div class="cards-restaurants">
-                    <img src="Css/Images_et_textes_Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo-restaurant1">
+                <article class="cards-restaurants">
+                    <div class="new-restaurant">
+                        <p class="new">Nouveau</p>
+                        <img src="Css/Images_et_textes_Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo-restaurant1">
+                    </div>
                     <div class="cards-bottom">
                         <div class="card-text">
                             <h3>La palette du gout</h3>
@@ -74,8 +80,8 @@
                             <i class="fa-regular fa-heart fa-lg"></i>
                         </div>
                     </div>
-                </div>
-                <div class="cards-restaurants">
+                </article>
+                <article class="cards-restaurants">
                     <img src="Css/Images_et_textes_Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo-restaurant2">
                     <div class="cards-bottom">
                         <div class="card-text">
@@ -86,8 +92,8 @@
                             <i class="fa-regular fa-heart fa-lg"></i>
                         </div>
                     </div>
-                </div>
-                <div class="cards-restaurants">
+                </article>
+                <article class="cards-restaurants">
                     <img src="Css/Images_et_textes_Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo-restaurant3">
                     <div class="cards-bottom">
                         <div class="card-text">
@@ -98,8 +104,8 @@
                             <i class="fa-regular fa-heart fa-lg"></i>
                         </div>
                     </div>
-                </div>
-                <div class="cards-restaurants">
+                </article>
+                <article class="cards-restaurants">
                     <img src="Css/Images_et_textes_Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo-restaurant4">
                     <div class="cards-bottom">
                         <div class="card-text">
@@ -110,19 +116,19 @@
                             <i class="fa-regular fa-heart fa-lg"></i>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
         <footer>
             <div class="logo-footer">
-                <img src="Css/Images_et_textes_Ohmyfood/images/logo/ohmyfood.png" alt="logo-header">
+                <p class="text-logo">ohmyfood</p>
             </div>
             <div class="footer-content">
                 <ul>
-                    <li>Proposer un restaurant</li>
-                    <li>Devenir partenaire</li>
-                    <li>Mentions légales</li>
-                    <li>Contact</li>
+                    <li><i class="fa-solid fa-utensils fa-xs"></i>Proposer un restaurant</li>
+                    <li><i class="fa-solid fa-handshake-angle fa-2xs"></i>Devenir partenaire</li>
+                    <li class="small-footer">Mentions légales</li>
+                    <li class="small-footer">Contact</li>
                 </ul>
             </div>
         </footer>
