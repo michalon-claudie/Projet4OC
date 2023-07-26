@@ -34,7 +34,6 @@ p {
   font-size: 17px;
   font-weight: 300;
 }
-
 /***Header***/
 .main-content {
   display: flex;
@@ -72,9 +71,6 @@ p {
 }
 .header-location form input {
   border-width: 0px;
-}
-.header-location form input::-moz-placeholder {
-  color: black;
 }
 .header-location form input::placeholder {
   color: black;
@@ -187,20 +183,11 @@ p {
 }
 .restaurants .cards-content .cards-restaurants .new-badge {
   position: absolute;
-  right: 36px;
-  top: auto;
-  background-color: #99E2D0;
-  color: #008766;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 2px;
-  padding: 5px 10px 5px 10px;
 }
 .restaurants .cards-content .cards-restaurants img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   height: 173px;
-  -o-object-fit: cover;
      object-fit: cover;
 }
 .restaurants .cards-content .cards-restaurants .cards-bottom {
