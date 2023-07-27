@@ -1,6 +1,8 @@
 /***General***/
 body {
   margin: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 * {
@@ -34,20 +36,46 @@ p {
   font-size: 17px;
   font-weight: 300;
 }
+
+ul {
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  padding-inline-start: 0px;
+}
+
 /***Header***/
 .main-content {
   display: flex;
   justify-content: center;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+}
+header img {
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .logo-header {
   display: flex;
-  justify-content: center;
+  align-items: center;
+}
+.logo-header .arrow, .logo-header .white-arrow {
+  display: flex;
+  width: 20%;
+  padding-left: 15px;
+}
+.logo-header .white-arrow {
+  color: white;
 }
 .logo-header img {
   width: 50%;
   padding-top: 20px;
   padding-bottom: 15px;
+  height: auto;
 }
 
 .header-location {
@@ -72,11 +100,14 @@ p {
 .header-location form input {
   border-width: 0px;
 }
+.header-location form input::-moz-placeholder {
+  color: black;
+}
 .header-location form input::placeholder {
   color: black;
 }
 
-/****Main-container****/
+/****Main-container -->homepage****/
 .introduction {
   background-color: #F6F6F6;
   display: flex;
@@ -183,11 +214,20 @@ p {
 }
 .restaurants .cards-content .cards-restaurants .new-badge {
   position: absolute;
+  right: 36px;
+  top: auto;
+  background-color: #99E2D0;
+  color: #008766;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 2px;
+  padding: 5px 10px 5px 10px;
 }
 .restaurants .cards-content .cards-restaurants img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   height: 173px;
+  -o-object-fit: cover;
      object-fit: cover;
 }
 .restaurants .cards-content .cards-restaurants .cards-bottom {
@@ -203,6 +243,93 @@ p {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+/***fin de main-container -->homepage
+
+/***menu-content***/
+.menu {
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  margin: -40px 0px 0px 0px;
+  background-color: #F6F6F6;
+  position: relative;
+  padding: 28px 13px 40px 13px;
+  /***button***/
+}
+.menu .menu-intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.menu .menu-intro .menu-title {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: Shrikhand;
+}
+.menu .menu-content {
+  display: flex;
+  flex-direction: column;
+}
+.menu .menu-content article {
+  margin-bottom: 40px;
+}
+.menu .menu-content h2 {
+  font-size: 16px;
+  font-weight: 300;
+}
+.menu .menu-content ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.menu .menu-content ul li {
+  box-shadow: 0px 1px 10px 6px rgba(67, 67, 67, 0.1);
+  border-radius: 15px;
+  padding: 12px 15px 12px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.menu .menu-content ul h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.menu .menu-content ul .last-sentence-menu {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 15px;
+}
+.menu .menu-content ul .last-sentence-menu .price {
+  font-weight: 700;
+  font-size: 15px;
+}
+.menu .menu-content ul .last-sentence-menu p {
+  font-weight: 300;
+  font-size: 15px;
+}
+.menu .pink-button {
+  border-radius: 25px;
+  border: 1px solid var(--main-bg-color);
+  background: linear-gradient(#FF79DA, #9356DC);
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.menu .pink-button p {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 49px;
+  padding-right: 49px;
 }
 
 /***footer***/
