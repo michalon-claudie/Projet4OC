@@ -248,7 +248,7 @@ header
     {
         display: flex;
         justify-content: inherit;
-        width: 36%;
+        width: 34%;
     }
     .cards-content 
     {
@@ -270,7 +270,7 @@ header
             border-radius: 15px;
             @media (min-width:1024px)
             {
-                width:35%;
+                width:36%;
             }
             .new-badge {
             position:absolute;
@@ -319,6 +319,11 @@ header
     background-color: #F6F6F6;
     position:relative;
     padding:28px 13px 40px 13px;
+    @media (min-width:1024px)
+    {
+        padding:28px 190px 40px 190px;
+        margin:-40px 210px 0px 210px;
+    }
     .menu-intro
     {
         display:flex;
@@ -326,6 +331,11 @@ header
         justify-content: space-between;
         align-items: center;
         margin-bottom: 30px;
+        @media (min-width:1024px)
+        {
+            justify-content: center;
+            gap:15px;
+        }
         .menu-title
         {
         font-size: 28px;

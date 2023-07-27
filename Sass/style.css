@@ -238,7 +238,7 @@ header img {
 .restaurants h2 {
   display: flex;
   justify-content: inherit;
-  width: 36%;
+  width: 34%;
 }
 .restaurants .cards-content {
   display: flex;
@@ -262,7 +262,7 @@ header img {
 }
 @media (min-width: 1024px) {
   .restaurants .cards-content .cards-restaurants {
-    width: 35%;
+    width: 36%;
   }
 }
 .restaurants .cards-content .cards-restaurants .new-badge {
@@ -312,12 +312,24 @@ header img {
   padding: 28px 13px 40px 13px;
   /***button***/
 }
+@media (min-width: 1024px) {
+  .menu {
+    padding: 28px 190px 40px 190px;
+    margin: -40px 210px 0px 210px;
+  }
+}
 .menu .menu-intro {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+}
+@media (min-width: 1024px) {
+  .menu .menu-intro {
+    justify-content: center;
+    gap: 15px;
+  }
 }
 .menu .menu-intro .menu-title {
   font-size: 28px;
