@@ -93,12 +93,14 @@ header
     align-items: center;
     display:flex;
     justify-content: center;
+    gap:17px;
     padding:15px;
     background-color: #EAEAEA;
     form
     {
     display:flex;
     justify-content: center;
+    width:32%;
         input[type="text"i]
         {
             text-align:center;
@@ -107,6 +109,7 @@ header
             font-weight: 500;
             background-color: #EAEAEA;
             color: #353535;
+            width:100%;
         
         }
         input
@@ -243,12 +246,14 @@ header
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-left: 179px;
+        padding-right: 179px;
     }
     h2
     {
         display: flex;
         justify-content: inherit;
-        width: 34%;
+        width: 36%;
     }
     .cards-content 
     {
@@ -260,8 +265,9 @@ header
             flex-wrap: wrap;
             display: flex;
             flex-direction: row;
-            gap: 50px;
-            justify-content: inherit;
+            row-gap: 50px;
+            column-gap: 100px;
+            justify-content: center;
         }
         .cards-restaurants {
             display:flex;
@@ -270,7 +276,14 @@ header
             border-radius: 15px;
             @media (min-width:1024px)
             {
-                width:36%;
+                width:42%;
+            }
+            a
+            {
+                text-decoration: none;
+                color: black;
+                display: flex;
+                flex-direction: column;
             }
             .new-badge {
             position:absolute;
@@ -472,14 +485,17 @@ footer
     }
     .logo-footer
     {
-        font-family:Shrikhand;
-        font-weight: 400;
-        font-size: 18px;
-        font-style: italic;
         color:white;
         @media (min-width:1024px)
         {
             padding-inline-start: 40px;
+        }
+        p
+        {
+            font-family:Shrikhand;
+            font-weight: 400;
+            font-size: 18px;
+            font-style: italic;
         }
     }
 }

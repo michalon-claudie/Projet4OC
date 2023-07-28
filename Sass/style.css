@@ -92,12 +92,14 @@ header img {
   align-items: center;
   display: flex;
   justify-content: center;
+  gap: 17px;
   padding: 15px;
   background-color: #EAEAEA;
 }
 .header-location form {
   display: flex;
   justify-content: center;
+  width: 32%;
 }
 .header-location form input[type=text i] {
   text-align: center;
@@ -106,6 +108,7 @@ header img {
   font-weight: 500;
   background-color: #EAEAEA;
   color: #353535;
+  width: 100%;
 }
 .header-location form input {
   border-width: 0px;
@@ -233,12 +236,14 @@ header img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 179px;
+    padding-right: 179px;
   }
 }
 .restaurants h2 {
   display: flex;
   justify-content: inherit;
-  width: 34%;
+  width: 36%;
 }
 .restaurants .cards-content {
   display: flex;
@@ -250,8 +255,10 @@ header img {
     flex-wrap: wrap;
     display: flex;
     flex-direction: row;
-    gap: 50px;
-    justify-content: inherit;
+    row-gap: 50px;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    justify-content: center;
   }
 }
 .restaurants .cards-content .cards-restaurants {
@@ -262,8 +269,14 @@ header img {
 }
 @media (min-width: 1024px) {
   .restaurants .cards-content .cards-restaurants {
-    width: 36%;
+    width: 42%;
   }
+}
+.restaurants .cards-content .cards-restaurants a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
 }
 .restaurants .cards-content .cards-restaurants .new-badge {
   position: absolute;
@@ -450,14 +463,16 @@ footer ul .fa-handshake-angle {
   padding-right: 6px;
 }
 footer .logo-footer {
-  font-family: Shrikhand;
-  font-weight: 400;
-  font-size: 18px;
-  font-style: italic;
   color: white;
 }
 @media (min-width: 1024px) {
   footer .logo-footer {
     padding-inline-start: 40px;
   }
+}
+footer .logo-footer p {
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: italic;
 }/*# sourceMappingURL=style.css.map */
