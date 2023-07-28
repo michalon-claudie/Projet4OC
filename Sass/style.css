@@ -24,7 +24,7 @@ h2 {
   font-size: 24px;
   font-weight: 700;
   margin-block-start: 0px;
-  margin-block-end: 25px;
+  margin-block-end: 12px;
 }
 
 h3 {
@@ -101,6 +101,11 @@ header img {
   justify-content: center;
   width: 32%;
 }
+@media (min-width: 1024px) {
+  .header-location form {
+    width: 12%;
+  }
+}
 .header-location form input[type=text i] {
   text-align: center;
   padding-inline-start: 0px;
@@ -121,6 +126,7 @@ header img {
 }
 
 /****Main-container -->homepage****/
+/***Variable couleur***/
 .introduction {
   background-color: #F6F6F6;
   display: flex;
@@ -169,6 +175,7 @@ header img {
 }
 
 /***main-container-functioning***/
+/***variable-ombres***/
 /***functioning-box***/
 .functioning {
   padding-top: 40px;
@@ -236,13 +243,12 @@ header img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 179px;
-    padding-right: 179px;
+    padding-left: 180px;
+    padding-right: 180px;
   }
 }
 .restaurants h2 {
   display: flex;
-  justify-content: inherit;
   width: 36%;
 }
 .restaurants .cards-content {
@@ -256,20 +262,21 @@ header img {
     display: flex;
     flex-direction: row;
     row-gap: 50px;
-    -moz-column-gap: 100px;
-         column-gap: 100px;
+    -moz-column-gap: 10%;
+         column-gap: 10%;
     justify-content: center;
   }
 }
 .restaurants .cards-content .cards-restaurants {
   display: flex;
   flex-direction: column;
-  box-shadow: 1px 1px 5px rgba(187, 186, 186, 0.1);
+  box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.1);
   border-radius: 15px;
 }
 @media (min-width: 1024px) {
   .restaurants .cards-content .cards-restaurants {
-    width: 42%;
+    width: 45%;
+    height: auto;
   }
 }
 .restaurants .cards-content .cards-restaurants a {
@@ -277,17 +284,24 @@ header img {
   color: black;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .restaurants .cards-content .cards-restaurants .new-badge {
   position: absolute;
-  right: 36px;
-  top: auto;
+  left: 73%;
+  top: 4%;
   background-color: #99E2D0;
   color: #008766;
   font-size: 14px;
   font-weight: 500;
   border-radius: 2px;
   padding: 5px 10px 5px 10px;
+}
+@media (min-width: 1024px) {
+  .restaurants .cards-content .cards-restaurants .new-badge {
+    left: 79%;
+    top: 4%;
+  }
 }
 .restaurants .cards-content .cards-restaurants img {
   border-top-left-radius: 15px;
@@ -359,6 +373,9 @@ header img {
 .menu .menu-content h2 {
   font-size: 16px;
   font-weight: 300;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #99E2D0;
+  width: 11%;
 }
 .menu .menu-content ul {
   list-style-type: none;
@@ -440,6 +457,10 @@ footer ul {
     padding-inline-end: 20px;
     flex-direction: row;
   }
+}
+footer ul a {
+  color: white;
+  text-decoration: none;
 }
 footer ul .footer-bottom {
   display: flex;
