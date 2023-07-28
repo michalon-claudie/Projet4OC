@@ -1,4 +1,10 @@
+/***variable-ombres***/
+@mixin box-shadow
+{
+    box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.1);
+}
 /***General***/
+
 body
 {
     margin:0px;
@@ -167,6 +173,13 @@ $color-backgrey:#F6F6F6;
         border-radius:25px;
         border:1px solid var(--main-bg-color);
         background:linear-gradient(#FF79DA,#9356DC);
+        @include box-shadow;
+        &:hover
+        {
+            opacity:0.7;
+            transition:500ms;
+            box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.4);
+        }
         p
         {
             font-size:16px;
@@ -180,11 +193,6 @@ $color-backgrey:#F6F6F6;
     }
 }
 /***main-container-functioning***/
-/***variable-ombres***/
-@mixin box-shadow
-{
-    box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.1);
-}
 /***functioning-box***/
 .functioning
 {
@@ -436,6 +444,12 @@ $color-backgrey:#F6F6F6;
     display: flex;
     justify-content: center;
     margin: auto;
+    &:hover
+    {
+        opacity:0.7;
+        transition:500ms;
+        box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.4);
+    }
     p
     {
         font-size:16px;

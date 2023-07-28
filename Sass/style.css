@@ -1,3 +1,4 @@
+/***variable-ombres***/
 /***General***/
 body {
   margin: 0px;
@@ -163,6 +164,12 @@ header img {
   border-radius: 25px;
   border: 1px solid var(--main-bg-color);
   background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.1);
+}
+.introduction .pink-button:hover {
+  opacity: 0.7;
+  transition: 500ms;
+  box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.4);
 }
 .introduction .pink-button p {
   font-size: 16px;
@@ -175,7 +182,6 @@ header img {
 }
 
 /***main-container-functioning***/
-/***variable-ombres***/
 /***functioning-box***/
 .functioning {
   padding-top: 40px;
@@ -416,6 +422,11 @@ header img {
   display: flex;
   justify-content: center;
   margin: auto;
+}
+.menu .pink-button:hover {
+  opacity: 0.7;
+  transition: 500ms;
+  box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.4);
 }
 .menu .pink-button p {
   font-size: 16px;
