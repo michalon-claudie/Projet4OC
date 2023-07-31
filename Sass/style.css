@@ -1,5 +1,6 @@
 /***mixin media query****/
 /***mixin-shadows***/
+/***mixin-color***/
 /***General***/
 body {
   margin: 0px;
@@ -33,6 +34,11 @@ h2 {
     margin-block-end: 25px;
   }
 }
+@media (min-width: 1025px) and (max-width: 1440px) {
+  h2 {
+    margin-block-end: 25px;
+  }
+}
 
 h3 {
   font-size: 18px;
@@ -60,42 +66,7 @@ header {
   display: flex;
   flex-direction: column;
 }
-header img {
-  height: 275px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.logo-header {
-  display: flex;
-  align-items: center;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .logo-header {
-    gap: 23%;
-  }
-}
-.logo-header .arrow, .logo-header .white-arrow {
-  display: flex;
-  width: 20%;
-  padding-left: 15px;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .logo-header .arrow, .logo-header .white-arrow {
-    width: auto;
-  }
-}
-.logo-header .white-arrow {
-  color: white;
-}
-.logo-header img {
-  width: 50%;
-  padding-top: 20px;
-  padding-bottom: 15px;
-  height: auto;
-}
-
-.header-location {
+header .header-location {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -103,17 +74,22 @@ header img {
   padding: 15px;
   background-color: #EAEAEA;
 }
-.header-location form {
+header .header-location form {
   display: flex;
   justify-content: center;
   width: 32%;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .header-location form {
+  header .header-location form {
     width: 20%;
   }
 }
-.header-location form input[type=text i] {
+@media (min-width: 1025px) and (max-width: 1440px) {
+  header .header-location form {
+    width: 11%;
+  }
+}
+header .header-location form input[type=text i] {
   text-align: center;
   padding-inline-start: 0px;
   font-size: 16px;
@@ -122,30 +98,80 @@ header img {
   color: #353535;
   width: 100%;
 }
-.header-location form input {
+header .header-location form input {
   border-width: 0px;
 }
-.header-location form input::-moz-placeholder {
+header .header-location form input::-moz-placeholder {
   color: black;
 }
-.header-location form input::placeholder {
+header .header-location form input::placeholder {
   color: black;
+}
+header .logo-header {
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .logo-header {
+    gap: 29%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  header .logo-header {
+    gap: 22%;
+  }
+}
+header .logo-header .arrow, header .logo-header .white-arrow {
+  display: flex;
+  width: 20%;
+  padding-left: 15px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .logo-header .arrow, header .logo-header .white-arrow {
+    width: auto;
+  }
+}
+header .logo-header .white-arrow {
+  color: white;
+}
+header .logo-header img {
+  width: 50%;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  height: auto;
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  header .logo-header img {
+    width: 14%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .logo-header img {
+    width: 34%;
+  }
+}
+header img {
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  header img {
+    height: 383px;
+  }
 }
 
 /****Main-container -->homepage****/
-/***Variable couleur***/
 .introduction {
   background-color: #F6F6F6;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 40px;
+  padding: 0px 35px 40px 35px;
 }
 .introduction h1 {
   display: flex;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
   font-size: 24px;
   font-weight: 700;
   padding-top: 45px;
@@ -156,11 +182,14 @@ header img {
     font-size: 32px;
   }
 }
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .introduction h1 {
+    font-size: 40px;
+  }
+}
 .introduction p {
   display: flex;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
   font-size: 18px;
   font-weight: 300;
   padding-bottom: 30px;
@@ -199,12 +228,22 @@ header img {
     padding: 40px;
   }
 }
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .functioning {
+    padding: 50px 180px 50px 180px;
+  }
+}
 .functioning .content-box {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+  .functioning .content-box {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
   .functioning .content-box {
     flex-direction: row;
   }
@@ -248,9 +287,10 @@ header img {
   background-color: #F6F6F6;
   padding: 40px 18px 40px 18px;
 }
-.restaurants h2 {
-  display: flex;
-  width: 36%;
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .restaurants {
+    padding: 50px 180px 50px 180px;
+  }
 }
 .restaurants .cards-content {
   display: flex;
@@ -265,6 +305,15 @@ header img {
     justify-content: center;
   }
 }
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .restaurants .cards-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    -moz-column-gap: 9%;
+         column-gap: 9%;
+    row-gap: 50px;
+  }
+}
 .restaurants .cards-content .cards-restaurants {
   display: flex;
   flex-direction: column;
@@ -274,6 +323,11 @@ header img {
 @media (min-width: 768px) and (max-width: 1024px) {
   .restaurants .cards-content .cards-restaurants {
     width: 47%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .restaurants .cards-content .cards-restaurants {
+    width: 45%;
   }
 }
 .restaurants .cards-content .cards-restaurants a {
@@ -298,6 +352,11 @@ header img {
   .restaurants .cards-content .cards-restaurants .new-badge {
     left: 76%;
     top: 6%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .restaurants .cards-content .cards-restaurants .new-badge {
+    left: 73%;
   }
 }
 .restaurants .cards-content .cards-restaurants img {
@@ -334,47 +393,76 @@ header img {
   background-color: #F6F6F6;
   position: relative;
   padding: 28px 13px 40px 13px;
-  /***button***/
 }
-.menu .menu-intro {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu {
+    margin: -40px 100px 0px 100px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .menu {
+    margin-left: 13%;
+    margin-right: 13%;
+    padding: 28px 213px 40px 213px;
+  }
+}
+
+.menu-intro {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
 }
-@media (min-width: 1024px) {
-  .menu .menu-intro {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu-intro {
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
   }
 }
-.menu .menu-intro .menu-title {
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .menu-intro {
+    margin-bottom: 40px;
+    gap: 4%;
+  }
+}
+.menu-intro .menu-title {
   font-size: 28px;
   font-weight: 400;
   font-family: Shrikhand;
 }
-.menu .menu-content {
+
+.menu-content {
   display: flex;
   flex-direction: column;
 }
-.menu .menu-content article {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu-content {
+    padding: 0px 30px 0px 30px;
+  }
+}
+.menu-content article {
   margin-bottom: 40px;
 }
-.menu .menu-content h2 {
+.menu-content h2 {
   font-size: 16px;
   font-weight: 300;
   padding-bottom: 6px;
   border-bottom: 3px solid #99E2D0;
   width: 11%;
 }
-.menu .menu-content ul {
+.menu-content ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.menu .menu-content ul li {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu-content ul {
+    gap: 25px;
+  }
+}
+.menu-content ul li {
   box-shadow: 0px 1px 10px 6px rgba(67, 67, 67, 0.1);
   border-radius: 15px;
   padding: 12px 15px 12px 15px;
@@ -382,25 +470,27 @@ header img {
   flex-direction: column;
   gap: 5px;
 }
-.menu .menu-content ul h3 {
+.menu-content ul h3 {
   font-size: 18px;
   font-weight: 500;
 }
-.menu .menu-content ul .last-sentence-menu {
+.menu-content ul .last-sentence-menu {
   display: flex;
   justify-content: space-between;
   font-weight: 300;
   font-size: 15px;
 }
-.menu .menu-content ul .last-sentence-menu .price {
+.menu-content ul .last-sentence-menu .price {
   font-weight: 700;
   font-size: 15px;
 }
-.menu .menu-content ul .last-sentence-menu p {
+.menu-content ul .last-sentence-menu p {
   font-weight: 300;
   font-size: 15px;
 }
-.menu .pink-button {
+
+/***button***/
+.pink-button {
   border-radius: 25px;
   border: 1px solid var(--main-bg-color);
   background: linear-gradient(#FF79DA, #9356DC);
@@ -408,12 +498,12 @@ header img {
   justify-content: center;
   margin: auto;
 }
-.menu .pink-button:hover {
+.pink-button:hover {
   opacity: 0.7;
   transition: 500ms;
   box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.4);
 }
-.menu .pink-button p {
+.pink-button p {
   font-size: 16px;
   font-weight: 500;
   color: white;
@@ -431,6 +521,12 @@ footer {
   flex-direction: column;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    flex-direction: row-reverse;
+    align-items: baseline;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
   footer {
     flex-direction: row-reverse;
     align-items: baseline;
@@ -454,6 +550,12 @@ footer ul {
     flex-direction: row;
   }
 }
+@media (min-width: 1025px) and (max-width: 1440px) {
+  footer ul {
+    flex-direction: row;
+    padding-inline-end: 20px;
+  }
+}
 footer ul a {
   color: white;
   text-decoration: none;
@@ -467,6 +569,12 @@ footer ul .footer-bottom {
   footer ul .footer-bottom {
     flex-direction: row;
     padding-inline-start: 20px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  footer ul .footer-bottom {
+    flex-direction: row;
+    padding-inline-start: 40px;
   }
 }
 footer ul .footer-bottom .small-footer {
