@@ -13,6 +13,13 @@
         @content;
     }
 }
+@mixin large-desktop
+{
+    @media (min-width:1441px) and (max-width:10000px)
+    {
+        @content;
+    }
+}
 /***mixin-shadows***/
 @mixin box-shadow
 {
@@ -28,6 +35,11 @@ body
     margin:0px;
     display: flex;
     flex-direction: column;
+    @include large-desktop
+    {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
 }
 *
 {
@@ -54,6 +66,10 @@ h2
         margin-block-end: 25px;
     }
     @include desktop 
+    {
+        margin-block-end: 25px;
+    }
+    @include large-desktop
     {
         margin-block-end: 25px;
     }
@@ -105,6 +121,10 @@ header
         {
             width:11%;
         }
+        @include large-desktop 
+        {
+            width:11%;
+        }
             input[type="text"i]
             {
                 text-align:center;
@@ -138,6 +158,10 @@ header
         {
             gap:22%;
         }
+        @include large-desktop 
+        {
+            gap:22%;
+        }
         .arrow,.white-arrow
         {
             display: flex;
@@ -166,6 +190,10 @@ header
             {
                 width:34%;
             }
+            @include large-desktop 
+            {
+                width:14%;
+            }
         }
     }
     img
@@ -173,6 +201,10 @@ header
         height:275px;
         object-fit: cover;
         @include desktop
+        {
+            height:383px;
+        }
+        @include large-desktop
         {
             height:383px;
         }
@@ -200,6 +232,10 @@ header
             font-size: 32px;
         }
         @include desktop
+        {
+            font-size:40px;
+        }
+        @include large-desktop
         {
             font-size:40px;
         }
@@ -237,6 +273,7 @@ header
     }
 }
 /***main-container-functioning***/
+
 /***functioning-box***/
 .functioning
 {
@@ -252,6 +289,10 @@ header
     {
         padding:50px 180px 50px 180px;
     }
+    @include large-desktop
+    {
+        padding:50px 180px 50px 180px;
+    }
     .content-box
     {
         display:flex;
@@ -262,6 +303,10 @@ header
             flex-direction: row;
         }
         @include desktop
+        {
+            flex-direction: row;
+        }
+        @include large-desktop
         {
             flex-direction: row;
         }
@@ -314,6 +359,10 @@ header
     {
         padding:50px 180px 50px 180px;
     }
+    @include large-desktop 
+    {
+        padding:50px 180px 50px 180px;
+    }
     .cards-content 
     {
         display:flex;
@@ -333,6 +382,13 @@ header
             column-gap: 9%;
             row-gap:50px;
         }
+        @include large-desktop
+        {
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 9%;
+            row-gap:50px;
+        }
         .cards-restaurants {
             display:flex;
             flex-direction: column;
@@ -343,6 +399,10 @@ header
                 width:47%;
             }
             @include desktop
+            {
+                width:45%;
+            }
+            @include large-desktop
             {
                 width:45%;
             }
@@ -373,6 +433,10 @@ header
             {
                 left:73%;
             }
+            @include large-desktop
+            {
+                left:73%;
+            }
             }
             img {
                 border-top-left-radius: 15px;
@@ -392,6 +456,40 @@ header
                 display:flex;
                 flex-direction: column;
                 gap:5px;
+                }
+                .like
+                {
+                    position:relative;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 16px;
+                    .full-heart,.empty-heart
+                    {
+                        position:absolute;
+                        font-size: 20px;
+                    }
+                    .full-heart
+                    {
+                        opacity:0;
+                        background:linear-gradient(#FF79DA,#9356DC);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        color:transparent;
+                        transition:all 400ms;
+                        &:active,&:hover
+                        {
+                            opacity:1;
+                        }
+                    }
+                    .empty-heart
+                    {
+                        opacity:1;
+                        &:hover
+                        {
+                            opacity:0;
+                        }
+                    }
                 }
             }
         }
@@ -420,6 +518,12 @@ header
         margin-right: 13%;
         padding:28px 213px 40px 213px;
     }
+    @include large-desktop
+    {
+        margin-left: 13%;
+        margin-right: 13%;
+        padding:28px 213px 40px 213px;
+    }
     }
     .menu-intro
     {
@@ -428,6 +532,7 @@ header
         justify-content: space-between;
         align-items: center;
         margin-bottom: 30px;
+        position:relative;
         @include tablet 
         {
             justify-content: center;
@@ -437,6 +542,47 @@ header
         {
             margin-bottom: 40px;
             gap:4%;
+            justify-content: center;
+        }
+        @include large-desktop 
+        {
+            margin-bottom: 40px;
+            gap:4%;
+            justify-content: center;
+        }
+        .like
+        {
+            position:relative;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 16px;
+            .full-heart,.empty-heart
+            {
+                position:absolute;
+                font-size: 20px;
+            }
+            .full-heart
+            {
+                opacity:0;
+                background:linear-gradient(#FF79DA,#9356DC);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color:transparent;
+                transition:all 400ms;
+                &:active,&:hover
+                {
+                    opacity:1;
+                }
+            }
+            .empty-heart
+            {
+                opacity:1;
+                &:hover
+                {
+                    opacity:0;
+                }
+            }
         }
         .menu-title
         {
@@ -551,6 +697,11 @@ footer
         flex-direction: row-reverse;
         align-items: baseline;
     }
+    @include large-desktop
+    {
+        flex-direction: row-reverse;
+        align-items: baseline;
+    }
     ul
     {
         display: flex;
@@ -573,6 +724,11 @@ footer
             flex-direction: row;
             padding-inline-end: 20px;
         }
+        @include large-desktop
+        {
+            flex-direction: row;
+            padding-inline-end: 20px;
+        }
         a
         {
             color:white;
@@ -589,6 +745,11 @@ footer
                 padding-inline-start: 20px;
             }
             @include desktop
+            {
+                flex-direction: row;
+                padding-inline-start: 40px;
+            }
+            @include large-desktop
             {
                 flex-direction: row;
                 padding-inline-start: 40px;
