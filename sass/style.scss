@@ -1,0 +1,830 @@
+/***mixin media query****/
+@mixin tablet
+{
+    @media (min-width: 768px) and (max-width:1024px) 
+    {
+        @content;
+    }
+}
+@mixin desktop
+{
+    @media (min-width:1025px) and (max-width:1440px)
+    {
+        @content;
+    }
+}
+@mixin large-desktop
+{
+    @media (min-width:1441px) and (max-width:10000px)
+    {
+        @content;
+    }
+}
+/***mixin-shadows***/
+@mixin box-shadow
+{
+    box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.1);
+}
+/***mixin-color***/
+$color-backgrey:#F6F6F6;
+
+/***General***/
+
+body
+{
+    margin:0px;
+    display: flex;
+    flex-direction: column;
+    @include large-desktop
+    {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+}
+*
+{
+    font-family: 'Roboto', sans-serif;
+}
+:root {
+    --main-color: #9356DC;
+    --main-bg-color: #FF79DA;
+    --filter-bg-color: #99E2D0;
+}
+h1,h3,p
+{
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+h2
+{
+    font-size:24px;
+    font-weight:700;
+    margin-block-start: 0px;
+    margin-block-end: 12px;
+    @include tablet 
+    {
+        margin-block-end: 25px;
+    }
+    @include desktop 
+    {
+        margin-block-end: 25px;
+    }
+    @include large-desktop
+    {
+        margin-block-end: 25px;
+    }
+}
+h3
+{
+    font-size:18px;
+    font-weight: 700;
+}
+p
+{
+    font-size:17px;
+    font-weight: 300;
+}
+ul
+{
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    padding-inline-start: 0px;
+}
+/***Header***/
+.main-content
+{
+    display:flex;
+    justify-content: center;
+}
+header
+{
+    display:flex;
+    flex-direction: column;
+    .header-location
+    {
+        align-items: center;
+        display:flex;
+        justify-content: center;
+        gap:17px;
+        padding:15px;
+        background-color: #EAEAEA;
+        form
+        {
+        display:flex;
+        justify-content: center;
+        width:32%;
+        @include tablet 
+        {
+            width:20%;
+        }
+        @include desktop 
+        {
+            width:11%;
+        }
+        @include large-desktop 
+        {
+            width:11%;
+        }
+            input[type="text"i]
+            {
+                text-align:center;
+                padding-inline-start: 0px;
+                font-size:16px;
+                font-weight: 500;
+                background-color: #EAEAEA;
+                color: #353535;
+                width:100%;
+            
+            }
+            input
+            {
+                border-width: 0px;
+            }
+            input::placeholder
+            {
+                color:black;
+            }
+        }
+    }
+    .logo-header
+    {
+        display:flex;
+        align-items: center;
+        @include tablet 
+        {
+            gap:29%;
+        }
+        @include desktop 
+        {
+            gap:22%;
+        }
+        @include large-desktop 
+        {
+            gap:22%;
+        }
+        .arrow,.white-arrow
+        {
+            display: flex;
+            width: 20%;
+            padding-left: 15px;
+            @include tablet 
+            {
+                width:auto;
+            }
+        }
+        .white-arrow
+        {
+            color:white;
+        }
+        img
+        {
+            width:50%;
+            padding-top:20px;
+            padding-bottom:15px;
+            height:auto;
+            @include desktop 
+            {
+                width:14%;
+            }
+            @include tablet
+            {
+                width:34%;
+            }
+            @include large-desktop 
+            {
+                width:14%;
+            }
+        }
+    }
+    img
+    {
+        height:275px;
+        object-fit: cover;
+        @include desktop
+        {
+            height:383px;
+        }
+        @include large-desktop
+        {
+            height:383px;
+        }
+    }
+}
+
+/****Main-container -->homepage****/
+.introduction
+{
+    background-color: $color-backgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0px 35px 40px 35px;
+    h1
+    {
+        display: flex;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        padding-top: 45px;
+        padding-bottom: 10px;
+        @include tablet 
+        {
+            font-size: 32px;
+        }
+        @include desktop
+        {
+            font-size:40px;
+        }
+        @include large-desktop
+        {
+            font-size:40px;
+        }
+    }
+    p
+    {
+        display: flex;
+        text-align: center; 
+        font-size: 18px;
+        font-weight:300;
+        padding-bottom:30px; 
+    }
+    .pink-button
+    {
+        border-radius:25px;
+        border:1px solid var(--main-bg-color);
+        background:linear-gradient(#FF79DA,#9356DC);
+        @include box-shadow;
+        &:hover
+        {
+            opacity:0.7;
+            transition:500ms;
+            box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.4);
+        }
+        p
+        {
+            font-size:16px;
+            font-weight:500;
+            color:white;
+            padding-bottom:15px;
+            padding-top:15px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+/***main-container-functioning***/
+
+/***functioning-box***/
+.functioning
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 18px;
+    padding-right: 18px;
+    @include tablet 
+    {
+        padding: 40px;
+    }
+    @include desktop
+    {
+        padding:50px 180px 50px 180px;
+    }
+    @include large-desktop
+    {
+        padding:50px 180px 50px 180px;
+    }
+    .content-box
+    {
+        display:flex;
+        flex-direction: column;
+        gap:20px;
+        @include tablet 
+        {
+            flex-direction: row;
+        }
+        @include desktop
+        {
+            flex-direction: row;
+        }
+        @include large-desktop
+        {
+            flex-direction: row;
+        }
+            .box
+            {
+                display: flex;
+                align-items: center;
+                width:100%;
+                .number
+                {
+                background-color: var(--main-color);
+                color: white;
+                border: 1px solid var(--main-color);
+                border-radius: 50px;
+                padding: 2px 6px 2px 6px;
+                font-size: 14px;
+                font-weight: 500;
+                position:absolute;
+                }
+                .section-box
+                {
+                display: flex;
+                align-items: center;
+                width:100%;
+                border-radius: 20px;
+                @include box-shadow;
+                padding: 26px 10px 26px 30px;
+                margin-left: 10px;
+                background-color: $color-backgrey;
+                    p
+                    {
+                        padding-inline-start: 20px;
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                    .fa-bars,.fa-mobile-screen-button
+                    {
+                        color:#7E7E7E;
+                    }
+                }   
+            }
+    }
+}
+/***Restaurants***/
+.restaurants
+{
+    background-color:$color-backgrey;
+    padding:40px 18px 40px 18px;
+    @include desktop 
+    {
+        padding:50px 180px 50px 180px;
+    }
+    @include large-desktop 
+    {
+        padding:50px 180px 50px 180px;
+    }
+    .cards-content 
+    {
+        display:flex;
+        flex-direction: column;
+        gap:18px;
+        @include tablet 
+        {
+            gap:40px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @include desktop
+        {
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 9%;
+            row-gap:50px;
+        }
+        @include large-desktop
+        {
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 9%;
+            row-gap:50px;
+        }
+        .cards-restaurants {
+            display:flex;
+            flex-direction: column;
+            @include box-shadow;
+            border-radius: 15px;
+            @include tablet 
+            {
+                width:47%;
+            }
+            @include desktop
+            {
+                width:45%;
+            }
+            @include large-desktop
+            {
+                width:45%;
+            }
+            a
+            {
+                text-decoration: none;
+                color: black;
+                display: flex;
+                flex-direction: column;
+                position:relative;
+            }
+            .new-badge {
+            position:absolute;
+            left:73%;
+            top:4%;
+            background-color: #99E2D0;
+            color:#008766;
+            font-size:14px;
+            font-weight: 500;
+            border-radius: 2px;
+            padding:5px 10px 5px 10px;
+            @include tablet 
+            {
+                left:76%;
+                top:6%;
+            }
+            @include desktop
+            {
+                left:73%;
+            }
+            @include large-desktop
+            {
+                left:73%;
+            }
+            }
+            img {
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                height: 173px;
+                object-fit: cover;
+            }
+            .cards-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px;
+                background-color: white;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+                .card-text {
+                display:flex;
+                flex-direction: column;
+                gap:5px;
+                }
+                .like
+                {
+                    position:relative;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 16px;
+                    .full-heart,.empty-heart
+                    {
+                        position:absolute;
+                        font-size: 20px;
+                    }
+                    .full-heart
+                    {
+                        opacity:0;
+                        background:linear-gradient(#FF79DA,#9356DC);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        color:transparent;
+                        transition:all 400ms;
+                        &:active,&:hover
+                        {
+                            opacity:1;
+                        }
+                    }
+                    .empty-heart
+                    {
+                        opacity:1;
+                        &:hover
+                        {
+                            opacity:0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/***fin de main-container -->homepage
+
+/***menu-content***/
+.menu
+{
+    display:flex;
+    flex-direction:column;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    margin:-40px 0px 0px 0px;
+    background-color: #F6F6F6;
+    position:relative;
+    padding:28px 13px 40px 13px;
+    @include tablet 
+    {
+        margin:-40px 100px 0px 100px;
+    }
+    @include desktop
+    {
+        margin-left: 13%;
+        margin-right: 13%;
+        padding:28px 213px 40px 213px;
+    }
+    @include large-desktop
+    {
+        margin-left: 13%;
+        margin-right: 13%;
+        padding:28px 213px 40px 213px;
+    }
+    }
+    .menu-intro
+    {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        position:relative;
+        @include tablet 
+        {
+            justify-content: center;
+            gap:20px;
+        }
+        @include desktop 
+        {
+            margin-bottom: 40px;
+            gap:4%;
+            justify-content: center;
+        }
+        @include large-desktop 
+        {
+            margin-bottom: 40px;
+            gap:4%;
+            justify-content: center;
+        }
+        .like
+        {
+            position:relative;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 16px;
+            .full-heart,.empty-heart
+            {
+                position:absolute;
+                font-size: 20px;
+            }
+            .full-heart
+            {
+                opacity:0;
+                background:linear-gradient(#FF79DA,#9356DC);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color:transparent;
+                transition:all 400ms;
+                &:active,&:hover
+                {
+                    opacity:1;
+                }
+            }
+            .empty-heart
+            {
+                opacity:1;
+                &:hover
+                {
+                    opacity:0;
+                }
+            }
+        }
+        .menu-title
+        {
+        font-size: 28px;
+        font-weight: 400;
+        font-family: Shrikhand;
+        }
+    }
+    .menu-content
+    {
+        display:flex;
+        flex-direction: column;
+        @include tablet 
+        {
+            padding:0px 30px 0px 30px;
+        }
+        article
+        {
+            margin-bottom: 40px;
+        }
+        h2
+        {
+            font-size: 16px;
+            font-weight: 300;
+            padding-bottom: 6px;
+            border-bottom: 3px solid #99E2D0;
+            width:11%;
+        }
+        ul
+        {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap:12px;
+            @include tablet 
+            {
+                gap:25px;
+            }
+            li
+            {
+                box-shadow: 0px 1px 10px 6px rgba(67, 67, 67, 0.1);
+                border-radius: 15px;
+                padding:12px 15px 12px 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                position:relative;
+                &:hover
+                {
+                    .order
+                    {
+                        text-align: center;
+                        right:0%;
+                        width:7%;
+                        height:36%;
+                        padding: 22px 12px;
+                        .fa-circle-check
+                        {
+                            display:flex;
+                        }
+                    }
+                    .text-meals
+                    {
+                        width:88%;
+                    }
+                }
+                .text-meals
+                {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    transition: 0.4s ease-out 0s right;
+                    width:100%;
+                    h3
+                    {
+                    font-size:18px;
+                    font-weight: 500;
+                    }
+                    .last-sentence-menu
+                    {
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: 300;
+                    font-size:15px;
+                        .price
+                        {
+                            font-weight: 700;
+                            font-size:15px;
+                        }
+                        p
+                        {
+                        font-weight: 300;
+                        font-size: 15px;
+                        }
+                    }
+                }
+                .order
+                {
+                    right:-12%;
+                    transition: 0.4s ease-out 0s right;
+                    width:0%;
+                    height:0%;
+                    position:absolute;
+                    top: 0%;
+                    background-color: #99E2D0;
+                    padding: 0px;
+                    border-radius: 15px;
+                    text-align: center;
+                    .fa-circle-check
+                    {
+                        display: none;
+                        font-size:20px;
+                        color:white;
+                    }
+                }
+            }
+        }
+    }
+    /***button***/
+    .pink-button
+    {
+    border-radius:25px;
+    border:1px solid var(--main-bg-color);
+    background:linear-gradient(#FF79DA,#9356DC);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    &:hover
+    {
+        opacity:0.7;
+        transition:500ms;
+        box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.4);
+    }
+    p
+    {
+        font-size:16px;
+        font-weight:500;
+        color:white;
+        padding-bottom:15px;
+        padding-top:15px;
+        padding-left: 49px;
+        padding-right: 49px;
+    }
+    }
+/***footer***/
+footer
+{
+    background-color: #353535;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    @include tablet 
+    {
+        flex-direction: row-reverse;
+        align-items: baseline;
+    }
+    @include desktop
+    {
+        flex-direction: row-reverse;
+        align-items: baseline;
+    }
+    @include large-desktop
+    {
+        flex-direction: row-reverse;
+        align-items: baseline;
+    }
+    ul
+    {
+        display: flex;
+        flex-direction: column;
+        gap:6px;
+        margin-block-end: 0px;
+        margin-block-start: 10px;
+        padding-inline-start: 0px;
+        list-style-type: none;
+        color:white;
+        font-size: 16px;
+        font-weight: 500;
+        @include tablet 
+        {
+            padding-inline-end: 20px;
+            flex-direction: row;
+        }
+        @include desktop
+        {
+            flex-direction: row;
+            padding-inline-end: 20px;
+        }
+        @include large-desktop
+        {
+            flex-direction: row;
+            padding-inline-end: 20px;
+        }
+        a
+        {
+            color:white;
+            text-decoration: none;
+        }
+        .footer-bottom
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            @include tablet
+            {
+                flex-direction: row;
+                padding-inline-start: 20px;
+            }
+            @include desktop
+            {
+                flex-direction: row;
+                padding-inline-start: 40px;
+            }
+            @include large-desktop
+            {
+                flex-direction: row;
+                padding-inline-start: 40px;
+            }
+            .small-footer
+            {
+                font-size:16px;
+                font-weight: 400;
+            }
+        }
+        .fa-utensils
+        {
+            padding-right: 8px;
+        }
+        .fa-handshake-angle
+        {
+            padding-right: 6px;
+        }
+    }
+    .logo-footer
+    {
+        color:white;
+        p
+        {
+            font-family:Shrikhand;
+            font-weight: 400;
+            font-size: 18px;
+            font-style: italic;
+        }
+    }
+}
