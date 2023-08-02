@@ -256,18 +256,18 @@ header
         @include box-shadow;
         &:hover
         {
-            opacity:0.7;
-            transition:500ms;
+            opacity: 0.7;
+            transition: 500ms;
             box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.4);
         }
         p
         {
-            font-size:16px;
-            font-weight:500;
-            color:white;
-            padding-bottom:15px;
-            padding-top:15px;
-            padding-left: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            padding-left:2 0px;
             padding-right: 20px;
         }
     }
