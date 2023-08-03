@@ -29,7 +29,50 @@
 $color-backgrey:#F6F6F6;
 
 /***General***/
-
+/***Loader-content***/
+.loader-content
+{
+    position: fixed;
+    width:100%;
+    height:100%;
+    margin:auto;
+    background-color: white;
+    z-index: 1000;
+    animation: back 4s linear;
+}
+.loader-circle
+{
+    width:200px;
+    height:200px;
+    border:6px solid var(--main-color);
+    border-radius:50px;
+    position:absolute;
+    font-family: Shirkhand;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,50%)rotate(0deg);
+    opacity:1;
+    animation:spin 4s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes spin{
+    0%{
+        transform:translate(-50%,50%)rotate(0deg);
+        opacity:1;
+    }
+    100%{
+        transform:translate(-50%,50%)rotate(360deg);
+        opacity:0;
+    }
+}
+@keyframes back{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
 body
 {
     margin:0px;
@@ -253,7 +296,9 @@ header
         border-radius:25px;
         border:1px solid var(--main-bg-color);
         background:linear-gradient(#FF79DA,#9356DC);
+        cursor:pointer;
         @include box-shadow;
+        transition: 1s;
         &:hover
         {
             opacity: 0.7;
@@ -267,8 +312,13 @@ header
             color: white;
             padding-bottom: 15px;
             padding-top: 15px;
-            padding-left:2 0px;
+            padding-left: 20px;
             padding-right: 20px;
+        }
+        a
+        {
+            color:white;
+            text-decoration: none;
         }
     }
 }
@@ -452,6 +502,10 @@ header
                 background-color: white;
                 border-bottom-left-radius: 15px;
                 border-bottom-right-radius: 15px;
+                a
+                {
+                    width:88%;
+                }
                 .card-text {
                 display:flex;
                 flex-direction: column;
@@ -464,6 +518,7 @@ header
                     justify-content: center;
                     align-items: center;
                     margin-right: 16px;
+                    cursor:pointer;
                     .full-heart,.empty-heart
                     {
                         position:absolute;
@@ -476,11 +531,12 @@ header
                         background-clip: text;
                         -webkit-background-clip: text;
                         color:transparent;
-                        transition:all 400ms;
-                        &:active,&:hover
+                        transition:all 400ms ease;
+                        &:active
                         {
                             opacity:1;
-                        }
+                            transition:400ms;
+                        }   
                     }
                     .empty-heart
                     {
