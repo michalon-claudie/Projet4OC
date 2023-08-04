@@ -4,32 +4,33 @@
 /***General***/
 /***Loader-content***/
 .loader-content {
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 100%;
   margin: auto;
   background-color: white;
-  z-index: 1000;
-  animation: back 4s linear;
+  z-index: 7;
+  animation: back 6s linear;
 }
 
 .loader-circle {
-  width: 100px;
-  height: 100px;
-  border-bottom: 8px solid var(--filter-bg-color);
-  border-top: 8px solid var(--main-bg-color);
-  border-radius: 50px;
+  width: 150px;
+  height: 150px;
+  border-bottom: 12px solid var(--filter-bg-color);
+  border-top: 12px solid var(--main-bg-color);
+  border-radius: 70px;
   position: absolute;
   font-family: Shirkhand;
-  top: 20%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, 50%) rotate(0deg);
   opacity: 1;
-  animation: spin 6s linear;
+  animation: spin 5s linear;
   animation-fill-mode: forwards;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 8;
 }
 
 @keyframes spin {
@@ -672,24 +673,27 @@ header img {
   gap: 5px;
   position: relative;
 }
-.menu-content ul li:hover .order {
+.menu-content ul li:active .order, .menu-content ul li:hover .order {
   text-align: center;
   right: 0%;
   width: 7%;
   height: 36%;
   padding: 22px 12px;
+  transition: 1s;
 }
-.menu-content ul li:hover .order .fa-circle-check {
+.menu-content ul li:active .order .fa-circle-check, .menu-content ul li:hover .order .fa-circle-check {
   display: flex;
+  justify-content: center;
 }
-.menu-content ul li:hover .text-meals {
+.menu-content ul li:active .text-meals, .menu-content ul li:hover .text-meals {
   width: 88%;
+  transition: 1s;
 }
 .menu-content ul li .text-meals {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  transition: 0.4s ease-out 0s right;
+  transition: 1s ease-in-out 0s;
   width: 100%;
 }
 .menu-content ul li .text-meals h3 {
@@ -711,10 +715,10 @@ header img {
   font-size: 15px;
 }
 .menu-content ul li .order {
-  right: -12%;
-  transition: 0.4s ease-out 0s right;
+  right: 0%;
+  transition: 1s ease-in-out 0s;
   width: 0%;
-  height: 0%;
+  height: 97%;
   position: absolute;
   top: 0%;
   background-color: #99E2D0;
