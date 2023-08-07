@@ -684,18 +684,28 @@ header img {
 .menu-content ul li:active .order, .menu-content ul li:hover .order {
   text-align: center;
   right: 0%;
-  width: 7%;
+  width: 10%;
   height: 36%;
   padding: 22px 12px;
   transition: 1s;
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .menu-content ul li:active .order, .menu-content ul li:hover .order {
+    width: 7%;
+  }
 }
 .menu-content ul li:active .order .fa-circle-check, .menu-content ul li:hover .order .fa-circle-check {
   display: flex;
   justify-content: center;
 }
 .menu-content ul li:active .text-meals, .menu-content ul li:hover .text-meals {
-  width: 88%;
+  width: 85%;
   transition: 1s;
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .menu-content ul li:active .text-meals, .menu-content ul li:hover .text-meals {
+    width: 88%;
+  }
 }
 .menu-content ul li .text-meals {
   display: flex;
@@ -708,6 +718,7 @@ header img {
 .menu-content ul li .text-meals h3 {
   font-size: 18px;
   font-weight: 500;
+  overflow: hidden;
 }
 .menu-content ul li .text-meals .last-sentence-menu {
   display: flex;
@@ -718,10 +729,18 @@ header img {
 .menu-content ul li .text-meals .last-sentence-menu .price {
   font-weight: 700;
   font-size: 15px;
+  text-overflow: inherit;
+  overflow: auto;
 }
 .menu-content ul li .text-meals .last-sentence-menu p {
   font-weight: 300;
   font-size: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu-content ul li .text-meals .last-sentence-menu .meals {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu-content ul li .order {
   right: 0%;
