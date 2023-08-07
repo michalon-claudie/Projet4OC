@@ -32,22 +32,21 @@ $color-backgrey:#F6F6F6;
 /***Loader-content***/
 .loader-content
 {
-    position:relative;
+    position: relative;
     width:100%;
     height:100%;
     margin:auto;
     background-color: white;
-    z-index: 7;
     animation: back 6s linear;
 }
 .loader-circle
 {
+    position:absolute;
     width:150px;
     height:150px;
     border-bottom: 12px solid var(--filter-bg-color);
     border-top: 12px solid var(--main-bg-color);
-    border-radius:70px;
-    position:absolute;
+    border-radius:80px;
     font-family: Shirkhand;
     top:10%;
     left:50%;
@@ -58,7 +57,6 @@ $color-backgrey:#F6F6F6;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index:8;
 }
 @keyframes spin{
     0%{
@@ -73,6 +71,15 @@ $color-backgrey:#F6F6F6;
 @keyframes back{
     0%{
         opacity:0;
+    }
+    25%{
+        opacity:0.5;
+    }
+    50%{
+        opacity:0.6;
+    }
+    75%{
+        opacity:0.7;
     }
     100%{
         opacity:1;
@@ -691,6 +698,7 @@ header
                 flex-direction: column;
                 gap: 5px;
                 position:relative;
+                animation:apparition 8s 2s;
                 &:active,&:hover
                 {
                     .order
@@ -720,6 +728,7 @@ header
                     gap: 5px;
                     transition: 1s ease-in-out 0s;
                     width:100%;
+                    overflow: hidden;
                     h3
                     {
                     font-size:18px;
@@ -763,6 +772,14 @@ header
                     }
                 }
             }
+        }
+    }
+    @keyframes apparition{
+        0%{
+            opacity:0;
+        }
+        100%{
+            opacity:1;
         }
     }
     /***button***/
