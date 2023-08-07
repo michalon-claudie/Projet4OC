@@ -641,6 +641,15 @@ header img {
   font-family: Shrikhand;
 }
 
+/***keyframes apparition-check**/
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .menu-content {
   display: flex;
   flex-direction: column;
@@ -653,25 +662,25 @@ header img {
 .menu-content article {
   margin-bottom: 40px;
 }
-.menu-content h2 {
+.menu-content article h2 {
   font-size: 16px;
   font-weight: 300;
   padding-bottom: 6px;
   border-bottom: 3px solid #99E2D0;
   width: 11%;
 }
-.menu-content ul {
+.menu-content article ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .menu-content ul {
+  .menu-content article ul {
     gap: 25px;
   }
 }
-.menu-content ul li {
+.menu-content article ul li {
   box-shadow: 0px 1px 10px 6px rgba(67, 67, 67, 0.1);
   border-radius: 15px;
   padding: 12px 15px 12px 15px;
@@ -679,9 +688,8 @@ header img {
   flex-direction: column;
   gap: 5px;
   position: relative;
-  animation: apparition 8s 2s;
 }
-.menu-content ul li:active .order, .menu-content ul li:hover .order {
+.menu-content article ul li:active .order, .menu-content article ul li:hover .order {
   text-align: center;
   right: 0%;
   width: 10%;
@@ -690,24 +698,24 @@ header img {
   transition: 1s;
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
-  .menu-content ul li:active .order, .menu-content ul li:hover .order {
+  .menu-content article ul li:active .order, .menu-content article ul li:hover .order {
     width: 7%;
   }
 }
-.menu-content ul li:active .order .fa-circle-check, .menu-content ul li:hover .order .fa-circle-check {
+.menu-content article ul li:active .order .fa-circle-check, .menu-content article ul li:hover .order .fa-circle-check {
   display: flex;
   justify-content: center;
 }
-.menu-content ul li:active .text-meals, .menu-content ul li:hover .text-meals {
+.menu-content article ul li:active .text-meals, .menu-content article ul li:hover .text-meals {
   width: 85%;
   transition: 1s;
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
-  .menu-content ul li:active .text-meals, .menu-content ul li:hover .text-meals {
+  .menu-content article ul li:active .text-meals, .menu-content article ul li:hover .text-meals {
     width: 88%;
   }
 }
-.menu-content ul li .text-meals {
+.menu-content article ul li .text-meals {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -715,34 +723,37 @@ header img {
   width: 100%;
   overflow: hidden;
 }
-.menu-content ul li .text-meals h3 {
+.menu-content article ul li .text-meals h3 {
   font-size: 18px;
   font-weight: 500;
+  text-overflow: ellipsis;
   overflow: hidden;
+  word-wrap: break-word;
+  white-space: nowrap;
 }
-.menu-content ul li .text-meals .last-sentence-menu {
+.menu-content article ul li .text-meals .last-sentence-menu {
   display: flex;
   justify-content: space-between;
   font-weight: 300;
   font-size: 15px;
 }
-.menu-content ul li .text-meals .last-sentence-menu .price {
+.menu-content article ul li .text-meals .last-sentence-menu .price {
   font-weight: 700;
   font-size: 15px;
   text-overflow: inherit;
   overflow: auto;
 }
-.menu-content ul li .text-meals .last-sentence-menu p {
+.menu-content article ul li .text-meals .last-sentence-menu p {
   font-weight: 300;
   font-size: 15px;
+}
+.menu-content article ul li .text-meals .last-sentence-menu .meals {
   text-overflow: ellipsis;
   overflow: hidden;
+  word-wrap: break-word;
+  white-space: nowrap;
 }
-.menu-content ul li .text-meals .last-sentence-menu .meals {
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.menu-content ul li .order {
+.menu-content article ul li .order {
   right: 0%;
   transition: 1s ease-in-out 0s;
   width: 0%;
@@ -754,20 +765,21 @@ header img {
   border-radius: 15px;
   text-align: center;
 }
-.menu-content ul li .order .fa-circle-check {
+.menu-content article ul li .order .fa-circle-check {
   display: none;
   font-size: 20px;
   color: white;
 }
-
-@keyframes apparition {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.menu-content .article-one {
+  animation: apparition 2s;
 }
+.menu-content .article-two {
+  animation: apparition 8s;
+}
+.menu-content .article-three {
+  animation: apparition 14s;
+}
+
 /***button***/
 .pink-button {
   border-radius: 25px;

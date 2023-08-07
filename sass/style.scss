@@ -659,6 +659,15 @@ header
         font-family: Shrikhand;
         }
     }
+    /***keyframes apparition-check**/
+    @keyframes apparition{
+        0%{
+            opacity:0;
+        }
+        100%{
+            opacity:1;
+        }
+    }
     .menu-content
     {
         display:flex;
@@ -670,135 +679,142 @@ header
         article
         {
             margin-bottom: 40px;
-        }
-        h2
-        {
-            font-size: 16px;
-            font-weight: 300;
-            padding-bottom: 6px;
-            border-bottom: 3px solid #99E2D0;
-            width:11%;
-        }
-        ul
-        {
-            list-style-type: none;
-            display: flex;
-            flex-direction: column;
-            gap:12px;
-            @include tablet 
+            h2
             {
-                gap:25px;
+                font-size: 16px;
+                font-weight: 300;
+                padding-bottom: 6px;
+                border-bottom: 3px solid #99E2D0;
+                width:11%;
             }
-            li
+            ul
             {
-                box-shadow: 0px 1px 10px 6px rgba(67, 67, 67, 0.1);
-                border-radius: 15px;
-                padding:12px 15px 12px 15px;
+                list-style-type: none;
                 display: flex;
                 flex-direction: column;
-                gap: 5px;
-                position:relative;
-                animation:apparition 8s 2s;
-                &:active,&:hover
+                gap:12px;
+                @include tablet 
                 {
-                    .order
+                    gap:25px;
+                }
+                li
+                {
+                    box-shadow: 0px 1px 10px 6px rgba(67, 67, 67, 0.1);
+                    border-radius: 15px;
+                    padding:12px 15px 12px 15px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    position:relative;
+                    &:active,&:hover
                     {
-                        text-align: center;
-                        right:0%;
-                        width:10%;
-                        height:36%;
-                        padding: 22px 12px;
-                        transition: 1s;
-                        @include desktop
+                        .order
                         {
-                            width:7%;
+                            text-align: center;
+                            right:0%;
+                            width:10%;
+                            height:36%;
+                            padding: 22px 12px;
+                            transition: 1s;
+                            @include desktop
+                            {
+                                width:7%;
+                            }
+                            .fa-circle-check
+                            {
+                                display:flex;
+                                justify-content: center;
+                            }
                         }
-                        .fa-circle-check
+                        .text-meals
                         {
-                            display:flex;
-                            justify-content: center;
+                            width:85%;
+                            transition: 1s;
+                            @include desktop
+                            {
+                                width:88%;
+                            }
                         }
                     }
                     .text-meals
                     {
-                        width:85%;
-                        transition: 1s;
-                        @include desktop
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        transition: 1s ease-in-out 0s;
+                        width:100%;
+                        overflow: hidden;
+                        h3
                         {
-                            width:88%;
+                        font-size:18px;
+                        font-weight: 500;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        word-wrap: break-word;
+                        white-space: nowrap;
                         }
-                    }
-                }
-                .text-meals
-                {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5px;
-                    transition: 1s ease-in-out 0s;
-                    width:100%;
-                    overflow: hidden;
-                    h3
-                    {
-                    font-size:18px;
-                    font-weight: 500;
-                    overflow: hidden;
-                    }
-                    .last-sentence-menu
-                    {
-                    display: flex;
-                    justify-content: space-between;
-                    font-weight: 300;
-                    font-size:15px;
-                        .price
+                        .last-sentence-menu
                         {
-                            font-weight: 700;
-                            font-size:15px;
-                            text-overflow: inherit;
-                            overflow: auto;
-                        }
-                        p
-                        {
+                        display: flex;
+                        justify-content: space-between;
                         font-weight: 300;
-                        font-size: 15px;
+                        font-size:15px;
+                            .price
+                            {
+                                font-weight: 700;
+                                font-size:15px;
+                                text-overflow: inherit;
+                                overflow: auto;
+                            }
+                            p
+                            {
+                            font-weight: 300;
+                            font-size: 15px;
+                            }
+                            .meals
+                            {
+                                    text-overflow: ellipsis;
+                                    overflow: hidden;
+                                    word-wrap: break-word;
+                                    white-space: nowrap;
+                            }
                         }
-                        .meals
-                        {
-                                text-overflow: ellipsis;
-                                overflow: hidden;
-                                word-wrap: break-word;
-                                white-space: nowrap;
-                        }
-                }
-                .order
-                {
-                    right:0%;
-                    transition: 1s ease-in-out 0s;
-                    width:0%;
-                    height:97%;
-                    position:absolute;
-                    top: 0%;
-                    background-color: #99E2D0;
-                    padding: 0px;
-                    border-radius: 15px;
-                    text-align: center;
-                    .fa-circle-check
-                    {
-                        display: none;
-                        font-size:20px;
-                        color:white;
                     }
-                }
+                    .order
+                    {
+                        right:0%;
+                        transition: 1s ease-in-out 0s;
+                        width:0%;
+                        height:97%;
+                        position:absolute;
+                        top: 0%;
+                        background-color: #99E2D0;
+                        padding: 0px;
+                        border-radius: 15px;
+                        text-align: center;
+                        .fa-circle-check
+                        {
+                            display: none;
+                            font-size:20px;
+                            color:white;
+                        }
+                    }
             }
         }
     }
-    @keyframes apparition{
-        0%{
-            opacity:0;
+        .article-one
+        {
+            animation:apparition 2s;
         }
-        100%{
-            opacity:1;
+        .article-two
+        {
+            animation:apparition 8s;
         }
-    }
+        .article-three
+        {
+            animation:apparition 14s;
+        }
+}
     /***button***/
     .pink-button
     {
