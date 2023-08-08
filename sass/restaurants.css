@@ -1,4 +1,8 @@
 /***mixin media query****/
+.main-container {
+  animation: none;
+}
+
 /***header***/
 .header img {
   height: 275px;
