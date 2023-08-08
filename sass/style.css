@@ -294,7 +294,7 @@ header img {
   background: linear-gradient(#FF79DA, #9356DC);
   cursor: pointer;
   box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.1);
-  transition: 1s;
+  transition: 2s;
 }
 .introduction .pink-button:hover {
   opacity: 0.7;
@@ -790,6 +790,7 @@ header img {
   display: flex;
   justify-content: center;
   margin: auto;
+  transition: 2s;
 }
 .menu .pink-button:hover {
   opacity: 0.7;

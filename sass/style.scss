@@ -312,7 +312,7 @@ header
         background:linear-gradient(#FF79DA,#9356DC);
         cursor:pointer;
         @include box-shadow;
-        transition: 1s;
+        transition: 2s;
         &:hover
         {
             opacity: 0.7;
@@ -831,6 +831,7 @@ header
     display: flex;
     justify-content: center;
     margin: auto;
+    transition: 2s;
     &:hover
     {
         opacity:0.7;
