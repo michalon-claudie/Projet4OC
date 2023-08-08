@@ -58,6 +58,7 @@
     opacity: 1;
   }
 }
+/***end-loader***/
 body {
   margin: 0px;
   display: flex;
@@ -123,15 +124,16 @@ ul {
   padding-inline-start: 0px;
 }
 
-/***Header***/
 .main-content {
   display: flex;
   justify-content: center;
 }
 
+/***header**/
 header {
   display: flex;
   flex-direction: column;
+  /***img-header-menu**/
 }
 header .header-location {
   align-items: center;
@@ -389,6 +391,9 @@ header img {
 .functioning .content-box .box .section-box .fa-bars, .functioning .content-box .box .section-box .fa-mobile-screen-button {
   color: #7E7E7E;
 }
+.functioning .content-box .box .section-box .fa-store {
+  color: var(--main-color);
+}
 
 /***Restaurants***/
 .restaurants {
@@ -464,7 +469,7 @@ header img {
   flex-direction: column;
   position: relative;
 }
-.restaurants .cards-content .cards-restaurants .new-badge {
+.restaurants .cards-content .cards-restaurants a .new-badge {
   position: absolute;
   left: 73%;
   top: 4%;
@@ -476,22 +481,22 @@ header img {
   padding: 5px 10px 5px 10px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .restaurants .cards-content .cards-restaurants .new-badge {
+  .restaurants .cards-content .cards-restaurants a .new-badge {
     left: 76%;
     top: 6%;
   }
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
-  .restaurants .cards-content .cards-restaurants .new-badge {
+  .restaurants .cards-content .cards-restaurants a .new-badge {
     left: 73%;
   }
 }
 @media (min-width: 1441px) and (max-width: 10000px) {
-  .restaurants .cards-content .cards-restaurants .new-badge {
+  .restaurants .cards-content .cards-restaurants a .new-badge {
     left: 73%;
   }
 }
-.restaurants .cards-content .cards-restaurants img {
+.restaurants .cards-content .cards-restaurants a img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   height: 173px;
@@ -510,7 +515,7 @@ header img {
 .restaurants .cards-content .cards-restaurants .cards-bottom a {
   width: 88%;
 }
-.restaurants .cards-content .cards-restaurants .cards-bottom .card-text {
+.restaurants .cards-content .cards-restaurants .cards-bottom a .card-text {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -535,14 +540,14 @@ header img {
   color: transparent;
   transition: all 400ms ease;
 }
-.restaurants .cards-content .cards-restaurants .cards-bottom .like .full-heart:active {
+.restaurants .cards-content .cards-restaurants .cards-bottom .like .full-heart:active, .restaurants .cards-content .cards-restaurants .cards-bottom .like .full-heart:hover {
   opacity: 1;
   transition: 400ms;
 }
 .restaurants .cards-content .cards-restaurants .cards-bottom .like .empty-heart {
   opacity: 1;
 }
-.restaurants .cards-content .cards-restaurants .cards-bottom .like .empty-heart:hover {
+.restaurants .cards-content .cards-restaurants .cards-bottom .like .empty-heart:hover, .restaurants .cards-content .cards-restaurants .cards-bottom .like .empty-heart:active {
   opacity: 0;
 }
 
@@ -558,6 +563,8 @@ header img {
   background-color: #F6F6F6;
   position: relative;
   padding: 28px 13px 40px 13px;
+  /***keyframes apparition-check**/
+  /***button***/
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .menu {
@@ -578,8 +585,7 @@ header img {
     padding: 28px 213px 40px 213px;
   }
 }
-
-.menu-intro {
+.menu .menu-intro {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -588,37 +594,37 @@ header img {
   position: relative;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .menu-intro {
+  .menu .menu-intro {
     justify-content: center;
     gap: 20px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
-  .menu-intro {
+  .menu .menu-intro {
     margin-bottom: 40px;
     gap: 4%;
     justify-content: center;
   }
 }
 @media (min-width: 1441px) and (max-width: 10000px) {
-  .menu-intro {
+  .menu .menu-intro {
     margin-bottom: 40px;
     gap: 4%;
     justify-content: center;
   }
 }
-.menu-intro .like {
+.menu .menu-intro .like {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 16px;
 }
-.menu-intro .like .full-heart, .menu-intro .like .empty-heart {
+.menu .menu-intro .like .full-heart, .menu .menu-intro .like .empty-heart {
   position: absolute;
   font-size: 20px;
 }
-.menu-intro .like .full-heart {
+.menu .menu-intro .like .full-heart {
   opacity: 0;
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
@@ -626,22 +632,20 @@ header img {
   color: transparent;
   transition: all 400ms;
 }
-.menu-intro .like .full-heart:active, .menu-intro .like .full-heart:hover {
+.menu .menu-intro .like .full-heart:active, .menu .menu-intro .like .full-heart:hover {
   opacity: 1;
 }
-.menu-intro .like .empty-heart {
+.menu .menu-intro .like .empty-heart {
   opacity: 1;
 }
-.menu-intro .like .empty-heart:hover {
+.menu .menu-intro .like .empty-heart:hover, .menu .menu-intro .like .empty-heart:active {
   opacity: 0;
 }
-.menu-intro .menu-title {
+.menu .menu-intro .menu-title {
   font-size: 28px;
   font-weight: 400;
   font-family: Shrikhand;
 }
-
-/***keyframes apparition-check**/
 @keyframes apparition {
   0% {
     opacity: 0;
@@ -650,37 +654,46 @@ header img {
     opacity: 1;
   }
 }
-.menu-content {
+.menu .menu-content {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .menu-content {
+  .menu .menu-content {
     padding: 0px 30px 0px 30px;
   }
 }
-.menu-content article {
+.menu .menu-content .article-one {
+  animation: apparition 2s;
+}
+.menu .menu-content .article-two {
+  animation: apparition 8s;
+}
+.menu .menu-content .article-three {
+  animation: apparition 14s;
+}
+.menu .menu-content article {
   margin-bottom: 40px;
 }
-.menu-content article h2 {
+.menu .menu-content article h2 {
   font-size: 16px;
   font-weight: 300;
   padding-bottom: 6px;
   border-bottom: 3px solid #99E2D0;
   width: 11%;
 }
-.menu-content article ul {
+.menu .menu-content article ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .menu-content article ul {
+  .menu .menu-content article ul {
     gap: 25px;
   }
 }
-.menu-content article ul li {
+.menu .menu-content article ul li {
   box-shadow: 0px 1px 10px 6px rgba(67, 67, 67, 0.1);
   border-radius: 15px;
   padding: 12px 15px 12px 15px;
@@ -689,7 +702,7 @@ header img {
   gap: 5px;
   position: relative;
 }
-.menu-content article ul li:active .order, .menu-content article ul li:hover .order {
+.menu .menu-content article ul li:active .order, .menu .menu-content article ul li:hover .order {
   text-align: center;
   right: 0%;
   width: 10%;
@@ -698,24 +711,24 @@ header img {
   transition: 1s;
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
-  .menu-content article ul li:active .order, .menu-content article ul li:hover .order {
+  .menu .menu-content article ul li:active .order, .menu .menu-content article ul li:hover .order {
     width: 7%;
   }
 }
-.menu-content article ul li:active .order .fa-circle-check, .menu-content article ul li:hover .order .fa-circle-check {
+.menu .menu-content article ul li:active .order .fa-circle-check, .menu .menu-content article ul li:hover .order .fa-circle-check {
   display: flex;
   justify-content: center;
 }
-.menu-content article ul li:active .text-meals, .menu-content article ul li:hover .text-meals {
+.menu .menu-content article ul li:active .text-meals, .menu .menu-content article ul li:hover .text-meals {
   width: 85%;
   transition: 1s;
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
-  .menu-content article ul li:active .text-meals, .menu-content article ul li:hover .text-meals {
+  .menu .menu-content article ul li:active .text-meals, .menu .menu-content article ul li:hover .text-meals {
     width: 88%;
   }
 }
-.menu-content article ul li .text-meals {
+.menu .menu-content article ul li .text-meals {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -723,7 +736,7 @@ header img {
   width: 100%;
   overflow: hidden;
 }
-.menu-content article ul li .text-meals h3 {
+.menu .menu-content article ul li .text-meals h3 {
   font-size: 18px;
   font-weight: 500;
   text-overflow: ellipsis;
@@ -731,29 +744,29 @@ header img {
   word-wrap: break-word;
   white-space: nowrap;
 }
-.menu-content article ul li .text-meals .last-sentence-menu {
+.menu .menu-content article ul li .text-meals .last-sentence-menu {
   display: flex;
   justify-content: space-between;
   font-weight: 300;
   font-size: 15px;
 }
-.menu-content article ul li .text-meals .last-sentence-menu .price {
+.menu .menu-content article ul li .text-meals .last-sentence-menu .price {
   font-weight: 700;
   font-size: 15px;
   text-overflow: inherit;
   overflow: auto;
 }
-.menu-content article ul li .text-meals .last-sentence-menu p {
+.menu .menu-content article ul li .text-meals .last-sentence-menu p {
   font-weight: 300;
   font-size: 15px;
 }
-.menu-content article ul li .text-meals .last-sentence-menu .meals {
+.menu .menu-content article ul li .text-meals .last-sentence-menu .meals {
   text-overflow: ellipsis;
   overflow: hidden;
   word-wrap: break-word;
   white-space: nowrap;
 }
-.menu-content article ul li .order {
+.menu .menu-content article ul li .order {
   right: 0%;
   transition: 1s ease-in-out 0s;
   width: 0%;
@@ -765,23 +778,12 @@ header img {
   border-radius: 15px;
   text-align: center;
 }
-.menu-content article ul li .order .fa-circle-check {
+.menu .menu-content article ul li .order .fa-circle-check {
   display: none;
   font-size: 20px;
   color: white;
 }
-.menu-content .article-one {
-  animation: apparition 2s;
-}
-.menu-content .article-two {
-  animation: apparition 8s;
-}
-.menu-content .article-three {
-  animation: apparition 14s;
-}
-
-/***button***/
-.pink-button {
+.menu .pink-button {
   border-radius: 25px;
   border: 1px solid var(--main-bg-color);
   background: linear-gradient(#FF79DA, #9356DC);
@@ -789,12 +791,12 @@ header img {
   justify-content: center;
   margin: auto;
 }
-.pink-button:hover {
+.menu .pink-button:hover {
   opacity: 0.7;
   transition: 500ms;
   box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.4);
 }
-.pink-button p {
+.menu .pink-button p {
   font-size: 16px;
   font-weight: 500;
   color: white;

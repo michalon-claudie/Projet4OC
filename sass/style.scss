@@ -85,6 +85,7 @@ $color-backgrey:#F6F6F6;
         opacity:1;
     }
 }
+/***end-loader***/
 body
 {
     margin:0px;
@@ -145,12 +146,12 @@ ul
     margin-block-start: 0px;
     padding-inline-start: 0px;
 }
-/***Header***/
 .main-content
 {
     display:flex;
     justify-content: center;
 }
+/***header**/
 header
 {
     display:flex;
@@ -251,6 +252,7 @@ header
             }
         }
     }
+    /***img-header-menu**/
     img
     {
         height:275px;
@@ -372,13 +374,13 @@ header
         {
             flex-direction: row;
         }
-            .box
+        .box
+        {
+            display: flex;
+            align-items: center;
+            width:100%;
+            .number
             {
-                display: flex;
-                align-items: center;
-                width:100%;
-                .number
-                {
                 background-color: var(--main-color);
                 color: white;
                 border: 1px solid var(--main-color);
@@ -387,9 +389,9 @@ header
                 font-size: 14px;
                 font-weight: 500;
                 position:absolute;
-                }
-                .section-box
-                {
+            }
+            .section-box
+            {
                 display: flex;
                 align-items: center;
                 width:100%;
@@ -398,18 +400,22 @@ header
                 padding: 26px 10px 26px 30px;
                 margin-left: 10px;
                 background-color: $color-backgrey;
-                    p
-                    {
-                        padding-inline-start: 20px;
-                        font-size: 16px;
-                        font-weight: 500;
-                    }
-                    .fa-bars,.fa-mobile-screen-button
-                    {
-                        color:#7E7E7E;
-                    }
-                }   
-            }
+                p
+                {
+                    padding-inline-start: 20px;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+                .fa-bars,.fa-mobile-screen-button
+                {
+                    color:#7E7E7E;
+                }
+                .fa-store
+                {
+                    color: var(--main-color);
+                }
+            }   
+        }
     }
 }
 /***Restaurants***/
@@ -452,7 +458,7 @@ header
             row-gap:50px;
         }
         .cards-restaurants {
-            display:flex;
+            display: flex;
             flex-direction: column;
             @include box-shadow;
             border-radius: 15px;
@@ -475,36 +481,37 @@ header
                 display: flex;
                 flex-direction: column;
                 position:relative;
-            }
-            .new-badge {
-            position:absolute;
-            left:73%;
-            top:4%;
-            background-color: #99E2D0;
-            color:#008766;
-            font-size:14px;
-            font-weight: 500;
-            border-radius: 2px;
-            padding:5px 10px 5px 10px;
-            @include tablet 
-            {
-                left:76%;
-                top:6%;
-            }
-            @include desktop
-            {
-                left:73%;
-            }
-            @include large-desktop
-            {
-                left:73%;
-            }
-            }
-            img {
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
-                height: 173px;
-                object-fit: cover;
+                .new-badge 
+                {
+                    position:absolute;
+                    left:73%;
+                    top:4%;
+                    background-color: #99E2D0;
+                    color:#008766;
+                    font-size:14px;
+                    font-weight: 500;
+                    border-radius: 2px;
+                    padding:5px 10px 5px 10px;
+                    @include tablet 
+                    {
+                        left:76%;
+                        top:6%;
+                    }
+                    @include desktop
+                    {
+                        left:73%;
+                    }
+                    @include large-desktop
+                    {
+                        left:73%;
+                    }
+                }
+                img {
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    height: 173px;
+                    object-fit: cover;
+                }
             }
             .cards-bottom {
                 display: flex;
@@ -517,11 +524,12 @@ header
                 a
                 {
                     width:88%;
-                }
-                .card-text {
-                display:flex;
-                flex-direction: column;
-                gap:5px;
+                    .card-text 
+                    {
+                        display:flex;
+                        flex-direction: column;
+                        gap:5px;
+                    }
                 }
                 .like
                 {
@@ -544,7 +552,7 @@ header
                         -webkit-background-clip: text;
                         color:transparent;
                         transition:all 400ms ease;
-                        &:active
+                        &:active,&:hover 
                         {
                             opacity:1;
                             transition:400ms;
@@ -553,7 +561,7 @@ header
                     .empty-heart
                     {
                         opacity:1;
-                        &:hover
+                        &:hover,&:active 
                         {
                             opacity:0;
                         }
@@ -591,7 +599,6 @@ header
         margin-left: 13%;
         margin-right: 13%;
         padding:28px 213px 40px 213px;
-    }
     }
     .menu-intro
     {
@@ -646,7 +653,7 @@ header
             .empty-heart
             {
                 opacity:1;
-                &:hover
+                &:hover,&:active
                 {
                     opacity:0;
                 }
@@ -675,6 +682,18 @@ header
         @include tablet 
         {
             padding:0px 30px 0px 30px;
+        }
+        .article-one
+        {
+            animation:apparition 2s;
+        }
+        .article-two
+        {
+            animation:apparition 8s;
+        }
+        .article-three
+        {
+            animation:apparition 14s;
         }
         article
         {
@@ -799,22 +818,10 @@ header
                             color:white;
                         }
                     }
+                }
             }
         }
     }
-        .article-one
-        {
-            animation:apparition 2s;
-        }
-        .article-two
-        {
-            animation:apparition 8s;
-        }
-        .article-three
-        {
-            animation:apparition 14s;
-        }
-}
     /***button***/
     .pink-button
     {
@@ -841,6 +848,7 @@ header
         padding-right: 49px;
     }
     }
+}
 /***footer***/
 footer
 {
