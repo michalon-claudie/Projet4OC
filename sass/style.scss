@@ -30,7 +30,7 @@ $color-backgrey:#F6F6F6;
 
 /***General***/
 /***Loader-content***/
-.loader-content
+.main-container
 {
     position: relative;
     width:100%;
@@ -38,6 +38,7 @@ $color-backgrey:#F6F6F6;
     margin:auto;
     background-color: white;
     animation: back 6s linear;
+    z-index:5;
 }
 .loader-circle
 {
@@ -57,6 +58,7 @@ $color-backgrey:#F6F6F6;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index:8;
 }
 @keyframes spin{
     0%{
@@ -73,13 +75,13 @@ $color-backgrey:#F6F6F6;
         opacity:0;
     }
     25%{
-        opacity:0.5;
+        opacity:0;
     }
     50%{
-        opacity:0.6;
+        opacity:0.3;
     }
     75%{
-        opacity:0.7;
+        opacity:0.8;
     }
     100%{
         opacity:1;
@@ -576,23 +578,23 @@ header
 /***menu-content***/
 .menu
 {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
     margin:-40px 0px 0px 0px;
     background-color: #F6F6F6;
-    position:relative;
-    padding:28px 13px 40px 13px;
+    position: relative;
+    padding: 28px 13px 40px 13px;
     @include tablet 
     {
-        margin:-40px 100px 0px 100px;
+        margin: -40px 100px 0px 100px;
     }
     @include desktop
     {
         margin-left: 13%;
         margin-right: 13%;
-        padding:28px 213px 40px 213px;
+        padding: 28px 213px 40px 213px;
     }
     @include large-desktop
     {
@@ -734,7 +736,7 @@ header
                             width:10%;
                             height:36%;
                             padding: 22px 12px;
-                            transition: 1s;
+                            transition: 0.5s;
                             @include desktop
                             {
                                 width:7%;
@@ -743,12 +745,15 @@ header
                             {
                                 display:flex;
                                 justify-content: center;
+                                position:absolute;
+                                top:35%;
+                                right:35%;
                             }
                         }
                         .text-meals
                         {
                             width:85%;
-                            transition: 1s;
+                            transition: 0.5s;
                             @include desktop
                             {
                                 width:88%;
@@ -760,7 +765,7 @@ header
                         display: flex;
                         flex-direction: column;
                         gap: 5px;
-                        transition: 1s ease-in-out 0s;
+                        transition: 0.5s ease 0s;
                         width:100%;
                         overflow: hidden;
                         h3
@@ -802,20 +807,22 @@ header
                     .order
                     {
                         right:0%;
-                        transition: 1s ease-in-out 0s;
+                        transition: 0.5s ease 0s;
                         width:0%;
                         height:97%;
                         position:absolute;
                         top: 0%;
                         background-color: #99E2D0;
                         padding: 0px;
-                        border-radius: 15px;
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
                         text-align: center;
                         .fa-circle-check
                         {
                             display: none;
                             font-size:20px;
                             color:white;
+                            top:50%;
                         }
                     }
                 }
