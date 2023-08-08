@@ -135,7 +135,6 @@ ul {
 header {
   display: flex;
   flex-direction: column;
-  /***img-header-menu**/
 }
 header .header-location {
   align-items: center;
@@ -234,21 +233,6 @@ header .logo-header img {
 @media (min-width: 1441px) and (max-width: 10000px) {
   header .logo-header img {
     width: 14%;
-  }
-}
-header img {
-  height: 275px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (min-width: 1025px) and (max-width: 1440px) {
-  header img {
-    height: 383px;
-  }
-}
-@media (min-width: 1441px) and (max-width: 10000px) {
-  header img {
-    height: 383px;
   }
 }
 
