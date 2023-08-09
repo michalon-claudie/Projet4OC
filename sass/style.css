@@ -432,6 +432,8 @@ header .logo-header img {
   flex-direction: column;
   box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.1);
   border-radius: 15px;
+  position: relative;
+  height: 100%;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .restaurants .cards-content .cards-restaurants {
@@ -454,6 +456,7 @@ header .logo-header img {
   display: flex;
   flex-direction: column;
   position: relative;
+  height: 100%;
 }
 .restaurants .cards-content .cards-restaurants a .new-badge {
   position: absolute;
@@ -506,34 +509,31 @@ header .logo-header img {
   flex-direction: column;
   gap: 5px;
 }
-.restaurants .cards-content .cards-restaurants .cards-bottom .like {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 16px;
+.restaurants .cards-content .cards-restaurants .like {
+  position: absolute;
+  top: 80%;
+  right: 10%;
   cursor: pointer;
 }
-.restaurants .cards-content .cards-restaurants .cards-bottom .like .full-heart, .restaurants .cards-content .cards-restaurants .cards-bottom .like .empty-heart {
+.restaurants .cards-content .cards-restaurants .like .full-heart, .restaurants .cards-content .cards-restaurants .like .empty-heart {
   position: absolute;
   font-size: 20px;
 }
-.restaurants .cards-content .cards-restaurants .cards-bottom .like .full-heart {
+.restaurants .cards-content .cards-restaurants .like .full-heart {
   opacity: 0;
   background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   transition: all 400ms ease;
 }
-.restaurants .cards-content .cards-restaurants .cards-bottom .like .full-heart:active, .restaurants .cards-content .cards-restaurants .cards-bottom .like .full-heart:hover {
+.restaurants .cards-content .cards-restaurants .like .full-heart:active, .restaurants .cards-content .cards-restaurants .like .full-heart:hover {
   opacity: 1;
   transition: 400ms;
 }
-.restaurants .cards-content .cards-restaurants .cards-bottom .like .empty-heart {
+.restaurants .cards-content .cards-restaurants .like .empty-heart {
   opacity: 1;
 }
-.restaurants .cards-content .cards-restaurants .cards-bottom .like .empty-heart:hover, .restaurants .cards-content .cards-restaurants .cards-bottom .like .empty-heart:active {
+.restaurants .cards-content .cards-restaurants .like .empty-heart:hover, .restaurants .cards-content .cards-restaurants .like .empty-heart:active {
   opacity: 0;
 }
 
