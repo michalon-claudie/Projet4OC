@@ -4,18 +4,18 @@
 }
 
 /***header***/
-.header img {
+header img {
   height: 275px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
-  .header img {
+  header img {
     height: 383px;
   }
 }
 @media (min-width: 1441px) and (max-width: 10000px) {
-  .header img {
+  header img {
     height: 383px;
   }
 }
