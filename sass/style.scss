@@ -618,31 +618,11 @@ footer
             color:white;
             text-decoration: none;
         }
-        .footer-bottom
+        .small-footer
         {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            @include tablet
-            {
-                flex-direction: row;
-                padding-inline-start: 20px;
-            }
-            @include desktop
-            {
-                flex-direction: row;
-                padding-inline-start: 40px;
-            }
-            @include large-desktop
-            {
-                flex-direction: row;
-                padding-inline-start: 40px;
-            }
-            .small-footer
-            {
-                font-size: 16px;
-                font-weight: 400;
-            }
+            font-size: 16px;
+            font-weight: 400;
+            padding-inline-start: 30px;
         }
         .fa-utensils
         {
