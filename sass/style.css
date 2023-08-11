@@ -601,7 +601,21 @@ footer ul a {
 footer ul .small-footer {
   font-size: 16px;
   font-weight: 400;
-  padding-inline-start: 30px;
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  footer ul .small-footer {
+    padding-inline-start: 30px;
+  }
+}
+@media (min-width: 1441px) and (max-width: 10000px) {
+  footer ul .small-footer {
+    padding-inline-start: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  footer ul .small-footer {
+    padding-inline-start: 30px;
+  }
 }
 footer ul .fa-utensils {
   padding-right: 8px;
