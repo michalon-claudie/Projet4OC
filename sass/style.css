@@ -550,18 +550,21 @@ footer {
   footer {
     flex-direction: row-reverse;
     align-items: baseline;
+    padding: 25px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
   footer {
     flex-direction: row-reverse;
     align-items: baseline;
+    padding: 25px;
   }
 }
 @media (min-width: 1441px) and (max-width: 10000px) {
   footer {
     flex-direction: row-reverse;
     align-items: baseline;
+    padding: 25px;
   }
 }
 footer ul {
@@ -614,7 +617,7 @@ footer ul .small-footer {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   footer ul .small-footer {
-    padding-inline-start: 30px;
+    padding-inline-start: 25px;
   }
 }
 footer ul .fa-utensils {
@@ -625,6 +628,21 @@ footer ul .fa-handshake-angle {
 }
 footer .logo-footer {
   color: white;
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  footer .logo-footer {
+    padding-inline-start: 40px;
+  }
+}
+@media (min-width: 1441px) and (max-width: 10000px) {
+  footer .logo-footer {
+    padding-inline-start: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  footer .logo-footer {
+    padding-inline-start: 25px;
+  }
 }
 footer .logo-footer p {
   font-family: Shrikhand;

@@ -575,16 +575,19 @@ footer
     {
         flex-direction: row-reverse;
         align-items: baseline;
+        padding:25px;
     }
     @include desktop
     {
         flex-direction: row-reverse;
         align-items: baseline;
+        padding:25px;
     }
     @include large-desktop
     {
         flex-direction: row-reverse;
         align-items: baseline;
+        padding:25px;
     }
     ul
     {
@@ -632,7 +635,7 @@ footer
             }
             @include tablet
             {
-                padding-inline-start: 30px;
+                padding-inline-start: 25px;
             }
         }
         .fa-utensils
@@ -647,6 +650,18 @@ footer
     .logo-footer
     {
         color: white;
+        @include desktop
+        {
+            padding-inline-start: 40px;
+        }
+        @include large-desktop
+        {
+            padding-inline-start: 40px;
+        }
+        @include tablet
+        {
+            padding-inline-start: 25px;
+        }
         p
         {
             font-family: Shrikhand;
