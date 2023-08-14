@@ -301,21 +301,21 @@ header
         cursor: pointer;
         @include box-shadow;
         transition: 2s;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
         &:hover
         {
             opacity: 0.7;
             transition: 500ms;
             box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.4);
         }
-        p
+        span
         {
             font-size: 16px;
             font-weight: 500;
             color: white;
-            padding-bottom: 15px;
-            padding-top: 15px;
-            padding-left: 20px;
-            padding-right: 20px;
         }
         a
         {
@@ -388,7 +388,7 @@ header
                 padding: 26px 10px 26px 30px;
                 margin-left: 10px;
                 background-color: $color-backgrey;
-                p
+                span
                 {
                     padding-inline-start: 20px;
                     font-size: 16px;
@@ -515,14 +515,15 @@ header
                 background-color: white;
                 border-bottom-left-radius: 15px;
                 border-bottom-right-radius: 15px;
-                a
+                .card-text 
                 {
-                    width: 88%;
-                    .card-text 
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    span
                     {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 5px;
+                        font-size: 17px;
+                        font-weight: 300;
                     }
                 }
             }

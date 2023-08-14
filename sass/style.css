@@ -281,20 +281,20 @@ header .logo-header img {
   cursor: pointer;
   box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.1);
   transition: 2s;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .introduction .pink-button:hover {
   opacity: 0.7;
   transition: 500ms;
   box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.4);
 }
-.introduction .pink-button p {
+.introduction .pink-button span {
   font-size: 16px;
   font-weight: 500;
   color: white;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 .introduction .pink-button a {
   color: white;
@@ -369,7 +369,7 @@ header .logo-header img {
   margin-left: 10px;
   background-color: #F6F6F6;
 }
-.functioning .content-box .box .section-box p {
+.functioning .content-box .box .section-box span {
   padding-inline-start: 20px;
   font-size: 16px;
   font-weight: 500;
@@ -501,13 +501,14 @@ header .logo-header img {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-.restaurants .cards-content .cards-restaurants .cards-bottom a {
-  width: 88%;
-}
-.restaurants .cards-content .cards-restaurants .cards-bottom a .card-text {
+.restaurants .cards-content .cards-restaurants .cards-bottom .card-text {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+.restaurants .cards-content .cards-restaurants .cards-bottom .card-text span {
+  font-size: 17px;
+  font-weight: 300;
 }
 .restaurants .cards-content .cards-restaurants .like {
   position: absolute;
