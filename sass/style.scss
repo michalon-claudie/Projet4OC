@@ -285,7 +285,7 @@ header
             font-size: 40px;
         }
     }
-    p
+    span
     {
         display: flex;
         text-align: center; 
@@ -316,6 +316,7 @@ header
             font-size: 16px;
             font-weight: 500;
             color: white;
+            padding-bottom: 0px;
         }
         a
         {
