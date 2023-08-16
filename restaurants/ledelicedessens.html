@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu-Délice des sens</title>
+    <title>Menu-Le délice des sens</title>
     <link rel="stylesheet" href="../sass/style.css">
+    <link rel="stylesheet" href="../sass/restaurants.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link href="../css/fontawesome-free-6.4.0-web (1)/fontawesome-free-6.4.0-web/css/all.css" rel="stylesheet">
+    <link href="../css/font-awesome/css/all.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet"> 
@@ -26,93 +27,138 @@
                         <i class="fa-solid fa-arrow-left"></i>
                     </a>
                 </div>
-                <img src="../css/Images_et_textes_Ohmyfood/images/logo/ohmyfood.png" alt="logo-header">
+                <img src="../images/logo/ohmyfood.png" alt="logo-header">
             </div>
-            <img src="../css/Images_et_textes_Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="picture-restaurant1">
+            <img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="picture-restaurant1">
         </header>
         <section class="menu">
             <div class="menu-intro">
-            <h1 class="menu-title">Le delice des sens</h3>
+                <h1 class="menu-title">Le délice des sens</h1>
                 <div class="like">
                     <i class="fa-regular fa-heart empty-heart"></i>
                     <i class="fa-solid fa-heart full-heart"></i>
                 </div>
             </div>
             <div class="menu-content">
-                <article>
+                <article class="article-one">
                     <h2>ENTREES</h2>
                     <ul class="meals-content">
                         <li>
-                            <h3>Tartare de thon</h3>
-                            <div class="last-sentence-menu">
-                                <p>Assaisonné au yuzu</p>
-                                <p class="price">25€</p>
+                            <div class="text-meals">
+                                <h3>Tartare de thon</h3>
+                                <div class="last-sentence-menu">
+                                    <span class="meals">Assaisonné au yuzu</span>
+                                    <span class="price">25€</span>
+                                </div>
+                            </div>
+                            <div class="order">
+                                <i class="fa-regular fa-circle-check"></i>
                             </div>
                         </li>
                         <li>
-                            <h3>Bouchée de homard croustillant</h3>
-                            <div class="last-sentence-menu">
-                                <p>Et sa farandole de petits légumes</p>
-                                <p class="price">35€</p>
+                            <div class="text-meals">
+                                <h3>Bouchée de homard croustillant</h3>
+                                <div class="last-sentence-menu">
+                                    <span>Et sa farandole de petits légumes</span>
+                                    <span class="price">35€</span>
+                                </div>
+                            </div>
+                            <div class="order">
+                                <i class="fa-regular fa-circle-check"></i>
                             </div>
                         </li>
                         <li>
-                            <h3>Poulet rôti aux herbes de Provence</h3>
-                            <div class="last-sentence-menu">
-                                <p>Et sa crème de truffe</p>
-                                <p class="price">40€</p>
+                            <div class="text-meals">
+                                <h3>Poulet rôti aux herbes de Provence</h3>
+                                <div class="last-sentence-menu">
+                                    <span class="meals">Et sa crème de truffe</span>
+                                    <span class="price">40€</span>
+                                </div>
+                            </div>
+                            <div class="order">
+                                <i class="fa-regular fa-circle-check"></i>
                             </div>
                         </li>
                     </ul>
                 </article>
-                <article>
+                <article class="article-two">
                     <h2>PLATS</h2>
                     <ul class="meals-content">
                         <li>
-                            <h3>Poulet rôti aux herbes de Provence</h3>
-                            <div class="last-sentence-menu">
-                                <p>Et sa crème de truffe</p>
-                                <p class="price">40€</p>
+                            <div class="text-meals">
+                                <h3>Poulet rôti aux herbes de Provence</h3>
+                                <div class="last-sentence-menu">
+                                    <span class="meals">Et sa crème de truffe</span>
+                                    <span class="price">40€</span>
+                                </div>
+                            </div>
+                            <div class="order">
+                                <i class="fa-regular fa-circle-check"></i>
                             </div>
                         </li>
                         <li>
-                            <h3>Langouste rôtie</h3>
-                            <div class="last-sentence-menu">
-                                <p>Et ses légumes de saison</p>
-                                <p class="price">35€</p>
+                            <div class="text-meals">
+                                <h3>Langouste rôtie</h3>
+                                <div class="last-sentence-menu">
+                                    <span class="meals">Et ses légumes de saison</span>
+                                    <span class="price">35€</span>
+                                </div>
+                            </div>
+                            <div class="order">
+                                <i class="fa-regular fa-circle-check"></i>
                             </div>
                         </li>
                         <li>
-                            <h3>Côte de boeuf Angus</h3>
-                            <div class="last-sentence-menu">
-                                <p>Et sa purée de panais</p>
-                                <p class="price">44€</p>
+                            <div class="text-meals">
+                                <h3>Côte de bœuf Angus</h3>
+                                <div class="last-sentence-menu">
+                                    <span class="meals">Et sa purée de panais</span>
+                                    <span class="price">44€</span>
+                                </div>
+                            </div>
+                            <div class="order">
+                                <i class="fa-regular fa-circle-check"></i>
                             </div>
                         </li>
                     </ul>
                 </article>
-                <article>
+                <article class="article-three">
                     <h2>DESSERTS</h2>
                     <ul class="meals-content">
                         <li>
-                            <h3>Œuf au plat</h3>
-                            <div class="last-sentence-menu">
-                                <p>Assaisonné à la truffe sur lit de caviar</p>
-                                <p class="price">76€</p>
+                            <div class="text-meals">
+                                <h3>Œuf au plat</h3>
+                                <div class="last-sentence-menu">
+                                    <span class="meals">Assaisonné à la truffe sur lit de caviar</span>
+                                    <span class="price">76€</span>
+                                </div>
+                            </div>
+                            <div class="order">
+                                <i class="fa-regular fa-circle-check"></i>
                             </div>
                         </li>
                         <li>
-                            <h3>Crème brulée</h3>
-                            <div class="last-sentence-menu">
-                                <p>Revisitée</p>
-                                <p class="price">22€</p>
+                            <div class="text-meals">
+                                <h3>Crème brulée</h3>
+                                <div class="last-sentence-menu">
+                                    <span class="meals">Revisitée</span>
+                                    <span class="price">22€</span>
+                                </div>
+                            </div>
+                            <div class="order">
+                                <i class="fa-regular fa-circle-check"></i>
                             </div>
                         </li>
                         <li>
-                            <h3>Tiramisu</h3>
-                            <div class="last-sentence-menu">
-                                <p>A la noisette</p>
-                                <p class="price">23€</p>
+                            <div class="text-meals">
+                                <h3>Tiramisu</h3>
+                                <div class="last-sentence-menu">
+                                    <span class="meals">À la noisette</span>
+                                    <span class="price">23€</span>
+                                </div>
+                            </div>
+                            <div class="order">
+                                <i class="fa-regular fa-circle-check"></i>
                             </div>
                         </li>
                     </ul>
@@ -130,10 +176,8 @@
                 <ul>
                     <li><i class="fa-solid fa-utensils fa-xs"></i>Proposer un restaurant</li>
                     <li><i class="fa-solid fa-handshake-angle fa-2xs"></i>Devenir partenaire</li>
-                    <div class="footer-bottom">
-                        <li class="small-footer">Mentions légales</li>
-                        <a href="MAILTO:ohmyfood@outlook.fr"><li class="small-footer">Contact</li></a>
-                    </div>
+                    <li class="small-footer">Mentions légales</li>
+                    <li class="small-footer-mail"><a href="MAILTO:ohmyfood@outlook.fr">Contact</a></li>
                 </ul>
             </div>
         </footer>
