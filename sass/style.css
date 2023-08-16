@@ -17,8 +17,8 @@
   position: absolute;
   width: 150px;
   height: 150px;
-  border-bottom: 12px solid var(--filter-bg-color);
-  border-top: 12px solid var(--main-bg-color);
+  border-bottom: 12px solid #99E2D0;
+  border-top: 12px solid #FF79DA;
   border-radius: 80px;
   font-family: Shirkhand;
   top: 10%;
@@ -178,9 +178,11 @@ header .header-location form input {
 }
 header .header-location form input::-moz-placeholder {
   color: black;
+  opacity: 1;
 }
 header .header-location form input::placeholder {
   color: black;
+  opacity: 1;
 }
 header .logo-header {
   display: flex;
@@ -236,309 +238,6 @@ header .logo-header img {
   }
 }
 
-/****Main-container -->homepage****/
-.introduction {
-  background-color: #F6F6F6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px 35px 40px 35px;
-}
-.introduction h1 {
-  display: flex;
-  text-align: center;
-  font-size: 24px;
-  font-weight: 700;
-  padding-top: 45px;
-  padding-bottom: 10px;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .introduction h1 {
-    font-size: 32px;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .introduction h1 {
-    font-size: 40px;
-  }
-}
-@media (min-width: 1441px) and (max-width: 10000px) {
-  .introduction h1 {
-    font-size: 40px;
-  }
-}
-.introduction span {
-  display: flex;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 300;
-  padding-bottom: 30px;
-}
-.introduction .pink-button {
-  border-radius: 25px;
-  border: 1px solid var(--main-bg-color);
-  background: linear-gradient(#FF79DA, #9356DC);
-  cursor: pointer;
-  box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.1);
-  transition: 2s;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.introduction .pink-button:hover {
-  opacity: 0.7;
-  transition: 500ms;
-  box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.4);
-}
-.introduction .pink-button span {
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
-  padding-bottom: 0px;
-}
-.introduction .pink-button a {
-  color: white;
-  text-decoration: none;
-}
-
-/***main-container-functioning***/
-/***functioning-box***/
-.functioning {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 18px;
-  padding-right: 18px;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .functioning {
-    padding: 40px;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .functioning {
-    padding: 50px 180px 50px 180px;
-  }
-}
-@media (min-width: 1441px) and (max-width: 10000px) {
-  .functioning {
-    padding: 50px 180px 50px 180px;
-  }
-}
-.functioning .content-box {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .functioning .content-box {
-    flex-direction: row;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .functioning .content-box {
-    flex-direction: row;
-  }
-}
-@media (min-width: 1441px) and (max-width: 10000px) {
-  .functioning .content-box {
-    flex-direction: row;
-  }
-}
-.functioning .content-box .box {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-.functioning .content-box .box .number {
-  background-color: var(--main-color);
-  color: white;
-  border: 1px solid var(--main-color);
-  border-radius: 50px;
-  padding: 2px 6px 2px 6px;
-  font-size: 14px;
-  font-weight: 500;
-  position: absolute;
-}
-.functioning .content-box .box .section-box {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.1);
-  padding: 26px 10px 26px 30px;
-  margin-left: 10px;
-  background-color: #F6F6F6;
-}
-.functioning .content-box .box .section-box span {
-  padding-inline-start: 20px;
-  font-size: 16px;
-  font-weight: 500;
-}
-.functioning .content-box .box .section-box .fa-bars, .functioning .content-box .box .section-box .fa-mobile-screen-button {
-  color: #7E7E7E;
-}
-.functioning .content-box .box .section-box .fa-store {
-  color: var(--main-color);
-}
-
-/***Restaurants***/
-.restaurants {
-  background-color: #F6F6F6;
-  padding: 40px 18px 40px 18px;
-}
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .restaurants {
-    padding: 50px 180px 50px 180px;
-  }
-}
-@media (min-width: 1441px) and (max-width: 10000px) {
-  .restaurants {
-    padding: 50px 180px 50px 180px;
-  }
-}
-.restaurants .cards-content {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .restaurants .cards-content {
-    gap: 40px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .restaurants .cards-content {
-    flex-direction: row;
-    flex-wrap: wrap;
-    -moz-column-gap: 9%;
-         column-gap: 9%;
-    row-gap: 50px;
-  }
-}
-@media (min-width: 1441px) and (max-width: 10000px) {
-  .restaurants .cards-content {
-    flex-direction: row;
-    flex-wrap: wrap;
-    -moz-column-gap: 9%;
-         column-gap: 9%;
-    row-gap: 50px;
-  }
-}
-.restaurants .cards-content .cards-restaurants {
-  display: flex;
-  flex-direction: column;
-  box-shadow: 5px 7px 8px rgba(82, 81, 81, 0.1);
-  border-radius: 15px;
-  position: relative;
-  height: 100%;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .restaurants .cards-content .cards-restaurants {
-    width: 47%;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .restaurants .cards-content .cards-restaurants {
-    width: 45%;
-  }
-}
-@media (min-width: 1441px) and (max-width: 10000px) {
-  .restaurants .cards-content .cards-restaurants {
-    width: 45%;
-  }
-}
-.restaurants .cards-content .cards-restaurants a {
-  text-decoration: none;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 100%;
-}
-.restaurants .cards-content .cards-restaurants a .new-badge {
-  position: absolute;
-  left: 73%;
-  top: 4%;
-  background-color: #99E2D0;
-  color: #008766;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 2px;
-  padding: 5px 10px 5px 10px;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .restaurants .cards-content .cards-restaurants a .new-badge {
-    left: 76%;
-    top: 6%;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .restaurants .cards-content .cards-restaurants a .new-badge {
-    left: 73%;
-  }
-}
-@media (min-width: 1441px) and (max-width: 10000px) {
-  .restaurants .cards-content .cards-restaurants a .new-badge {
-    left: 73%;
-  }
-}
-.restaurants .cards-content .cards-restaurants a img {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  height: 173px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.restaurants .cards-content .cards-restaurants .cards-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background-color: white;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-.restaurants .cards-content .cards-restaurants .cards-bottom .card-text {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.restaurants .cards-content .cards-restaurants .cards-bottom .card-text span {
-  font-size: 17px;
-  font-weight: 300;
-}
-.restaurants .cards-content .cards-restaurants .like {
-  position: absolute;
-  top: 80%;
-  right: 10%;
-  cursor: pointer;
-}
-.restaurants .cards-content .cards-restaurants .like .full-heart, .restaurants .cards-content .cards-restaurants .like .empty-heart {
-  position: absolute;
-  font-size: 20px;
-}
-.restaurants .cards-content .cards-restaurants .like .full-heart {
-  opacity: 0;
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: all 400ms ease;
-}
-.restaurants .cards-content .cards-restaurants .like .full-heart:active, .restaurants .cards-content .cards-restaurants .like .full-heart:hover {
-  opacity: 1;
-  transition: 400ms;
-}
-.restaurants .cards-content .cards-restaurants .like .empty-heart {
-  opacity: 1;
-}
-.restaurants .cards-content .cards-restaurants .like .empty-heart:hover, .restaurants .cards-content .cards-restaurants .like .empty-heart:active {
-  opacity: 0;
-}
-
 /***fin de main-container -->homepage
 
 /***footer***/
@@ -572,14 +271,12 @@ footer {
 footer ul {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 9px;
   margin-block-end: 0px;
   margin-block-start: 10px;
   padding-inline-start: 0px;
   list-style-type: none;
   color: white;
-  font-size: 16px;
-  font-weight: 500;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   footer ul {
@@ -603,6 +300,10 @@ footer ul a {
   color: white;
   text-decoration: none;
 }
+footer ul li {
+  font-size: 16px;
+  font-weight: 500;
+}
 footer ul .small-footer {
   font-size: 16px;
   font-weight: 400;
@@ -621,6 +322,10 @@ footer ul .small-footer {
   footer ul .small-footer {
     padding-inline-start: 25px;
   }
+}
+footer ul .small-footer-mail {
+  font-size: 16px;
+  font-weight: 400;
 }
 footer ul .fa-utensils {
   padding-right: 8px;

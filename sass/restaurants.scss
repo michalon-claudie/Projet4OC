@@ -20,6 +20,11 @@
         @content;
     }
 }
+/***color-variables**/
+
+$main-color:#9356DC;
+$main-bg-color:#FF79DA;
+$filter-bg-color:#99E2D0;
 .main-container
 {
     animation: none;
@@ -171,7 +176,7 @@ header
                 font-size: 16px;
                 font-weight: 300;
                 padding-bottom: 6px;
-                border-bottom: 3px solid #99E2D0;
+                border-bottom: 3px solid $filter-bg-color;
                 width: 11%;
             }
             ul
@@ -278,7 +283,7 @@ header
                         height: 97%;
                         position: absolute;
                         top: 0%;
-                        background-color: #99E2D0;
+                        background-color: $filter-bg-color;
                         padding: 0px;
                         border-top-right-radius: 15px;
                         border-bottom-right-radius: 15px;
@@ -299,7 +304,7 @@ header
     .pink-button
     {
         border-radius: 25px;
-        border: 1px solid var(--main-bg-color);
+        border: 1px solid $main-bg-color;
         background: linear-gradient(#FF79DA,#9356DC);
         display: flex;
         justify-content: center;
