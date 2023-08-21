@@ -321,11 +321,10 @@ $filter-bg-color:#99E2D0;
                     background-clip: text;
                     -webkit-background-clip: text;
                     color: transparent;
-                    transition: all 400ms ease;
+                    transition:400ms;
                     &:active,&:hover 
                     {
                         opacity: 1;
-                        transition: 400ms;
                     }   
                 }
                 .empty-heart
